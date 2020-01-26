@@ -3,6 +3,7 @@ title= "Reasons"
 date =2020-01-23T22:56:50Z
 type = "posts"
 draft = false
+comments = true
 description = "This is just a simple commentary about what's going on with this page"
 tags = ["About me","blog","for you","future","Jorge Andreu","jorgeancal","thoughts"]
 +++

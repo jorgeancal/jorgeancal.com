@@ -3,6 +3,7 @@ title= "Promises in Angular 6"
 date= 2020-01-23T22:56:50Z
 type = "posts"
 draft = false
+comments = true
 description = "In this post you will learn about promises in Angular, which I think is a really interesting thing because you really need to know about it when you implement an API in your project and you want to have control of your application and not be crossing your fingers hoping that everything works properly."
 tags = ["Angular 5", "development", "JavaScript", "JS", "Promise"]
 +++

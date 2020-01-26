@@ -7,6 +7,7 @@ draft= false
 tags=["OAuth", "OAuth2", "summary"]
 categories = ["oauth2"]
 series = ["oauth2"]
+comments = true
 +++
 
 I know the most of you know what is OAuth2 but some people who is starting in this ‘world’  can be a bit lost in this. So I have tried to prepare a little post which summarizes all the documentation and be a fast read for everyone. Let’s go to start.

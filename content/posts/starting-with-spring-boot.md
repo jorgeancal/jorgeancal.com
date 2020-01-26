@@ -3,6 +3,7 @@ draft = false
 date = 2020-01-23T23:10:39Z
 title = "Starting with Spring Boot"
 type = "posts"
+comments = true
 description = "In this post we’re going to have different sections, in the first one, as in all beginner courses, we’re going to define Spring, learn how to create a project with Spring Boot and learn what the meaning of the basic class which Spring gives you when you start a project is."
 slug = ""
 tags = ["init spring boot", "spring", "spring boot", "spring boot 2.0", "starting with spring", "starting with spring boot"]

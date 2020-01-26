@@ -3,6 +3,7 @@ title= "How to Install Jenkins"
 date= 2020-01-23T22:52:33Z
 type = "posts"
 draft = false
+comments = true
 description = "In this post I’m going to try to explain what Jenkins is, why we use it, how to install it in Debain and how to use it. Everyone is going to say… oh no! Another boring post about it. I’ll tell them just maybe or maybe not. Find out for yourself."
 tags= ["How to install Jenkins", "installations", " Jenkins Debian 9", "Jenkis Debian", "What’s jenkins"]
 +++

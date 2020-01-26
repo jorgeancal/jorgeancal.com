@@ -3,6 +3,7 @@ title = "How to Install Gitlab on Debian 9"
 date = 2020-01-23T22:52:33Z
 type = "posts"
 draft = false
+comments = true
 description = "Let’s go with another installation. I’m not really sure about installing GitLab on my server, but I have been thinking a lot about it. I had installed Git which I like, but I tried one years ago and I like it but I haven’t installed it on my server."
 tags= ["GitLab", "GitLab in Debain 9", "GitLab in Debian", "GitLad Installation", "How to install GitLab", "installations"]
 +++
