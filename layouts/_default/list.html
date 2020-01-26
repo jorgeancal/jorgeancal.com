@@ -1,11 +1,15 @@
 {{ partial "header" . }}
+<main class="container">
+  <div class="row">
+    {{ partial "author" . }}
+    <section class="container list col-sm-12 col-lg-9 themed-grid-col">
+    <h2>{{ .Title | humanize }}</h2>
 
-<main>
-
-    <h2>{{ .Title }}</h2>
-
-    {{ range (.Paginator 5).Pages }} {{ partial "list-item" . }} {{ end }}
+    {{ range (.Paginator 5).Pages }}
+      {{ partial "list-item" . }}
+    {{ end }}
     {{ partial "paginator" . }}
+    </section>
 </main>
 
 {{ partial "footer" . }}

@@ -4,7 +4,7 @@ title = "The Green Notebook"
 theme = "minimal"
 disqusShortname = "jorgeancal.com" # delete this to disable disqus comments
 googleAnalytics = "UA-108421112-1"
-
+publishDir="docs"
 [params]
     avatar = "/images/avatar.png"
     author = "Jorge Andreu Calatayud"
@@ -40,11 +40,6 @@ googleAnalytics = "UA-108421112-1"
     url = "/about-this-site/"
     name = "About This Site"
     weight = 3
-
-[[menu.main]]
-    url = "/posts/"
-    name = "Posts"
-    weight = 4
 
 # Social icons to be shown on the right-hand side of the navigation bar.
 # The "name" field should match the name of the icon in Font Awesome.

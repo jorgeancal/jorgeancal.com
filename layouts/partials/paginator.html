@@ -1,6 +1,6 @@
 {{ $pag := $.Paginator }}
 {{ if gt $pag.TotalPages .Site.Params.pageMin }}
-<div>
+<div class="pagicenter">
 <ul class="pagination">
     {{ with $pag.First }}
     <li class="page-item">

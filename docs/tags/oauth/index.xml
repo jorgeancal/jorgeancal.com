@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OAuth on The Green Notebook</title>
+    <link>https://jorgeancal.com/tags/oauth/</link>
+    <description>Recent content in OAuth on The Green Notebook</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 20 Jan 2020 23:20:17 +0000</lastBuildDate>
+    
+	<atom:link href="https://jorgeancal.com/tags/oauth/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Summary About Oauth2</title>
+      <link>https://jorgeancal.com/posts/summary-about-oauth2/</link>
+      <pubDate>Mon, 20 Jan 2020 23:20:17 +0000</pubDate>
+      
+      <guid>https://jorgeancal.com/posts/summary-about-oauth2/</guid>
+      <description>I know the most of you know what is OAuth2 but some people who is starting in this ‘world’ can be a bit lost in this. So I have tried to prepare a little post which summarizes all the documentation and be a fast read for everyone. Let’s go to start.
+What is a OAuth2? OAuth2 is a authentication framework which allows third-party applications to grant access to a HTTP service for websites, mobile application or desktop applications.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -12,23 +12,23 @@ series = []
 
 In this post we’re going to have different sections, in the first one, as in all beginner courses, we’re going to define Spring, learn how to create a project with Spring Boot and learn what the meaning of the basic class which Spring gives you when you start a project is.
 
-# What’s Spring?
+## What’s Spring?
 
 If you stop someone on the street and ask them about it, they are going to tell you that Spring is a season of the year, but that’s not the meaning that we want. Spring in IT is an open source framework  for Java Platforms which was created by Roderick “Rod” Johnson. This framework is lightweight because it has a modular philosophy, I mean if you have a base and you add the different modules when you need them or when the application is getting bigger. This framework is really popular because of it’s simplicity, loose coupling and testability.
 
 Inside this framework we can find Spring Boot. If we go to the website and we read the summary of Spring Boot which is ‘Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can “just run”‘. It think it’s a really good explication.
 
-## How to create a project
+### How to create a project
 
 Well this is the easier thing which you are going to learn about Spring. I don’t know which IDE you’re using but I use IntelliJ IDEA or Eclipse with the Spring Tools and both of them has the initialiser option, but if you’re using another one you can go to the initialiser of Spring WebSite. If you have the initialiser in your IDE just go to “Create a New Project”.
 
-### IntelliJ IDEA
+#### IntelliJ IDEA
 
 After creating a new project, you have to select the “Spring Initializr” option and click “next”, after that you need to fill in the form data and click “next” again.  Now you’ll have a list with all the different Spring modules which you can add to your project, here I have to add that I usually use the Lombok dependency because with it I can get shorter classes, I’ll do another post talking about that. After selecting all the modules which we need, click on “next”. Now give it a name and click “Finish”. That’s all, it’s easy isn’t it? I uploaded a few pictures of the whole process here.
 
-![Intellij0 #intheleft #thumbinline2](/images/Intellij0.png) ![Intellij2 #intheleft #thumbinline2](/images/Intellij1.png) ![Intellij2 #intheleft #thumbinline2](/images/Intellij2.png) ![Intellij3 #intheleft #thumbinline2](/images/Intellij3.png)
+![Intellij0 #intheleft #thumbinline2](/images/Intellij0.png)![Intellij2 #intheleft #thumbinline2](/images/Intellij1.png)![Intellij2 #intheleft #thumbinline2](/images/Intellij2.png)![Intellij3 #intheleft #thumbinline2](/images/Intellij3.png)
 
-### STS
+#### STS
 
 It’s really similar to IntelliJ. I’ll give you a few pictures showing you how to do it. The difference is in the second one, you can choose more things and give it a name in the same step which is more useful than IntelliJ, I think.
 
@@ -36,7 +36,7 @@ It’s really similar to IntelliJ. I’ll give you a few pictures showing you ho
 
 ![STS #intheleft #thumbinline2](/images/STS1.png)![STS #intheleft #thumbinline2](/images/STS2.png)
 
-## What  Do We Have In The Project?
+### What  Do We Have In The Project?
 
 When you open the project you have three files as you can see in the next image:
 

@@ -6,10 +6,11 @@
 
     <article class="col-sm-12 col-lg-9 themed-grid-col">
       <header>
-          <h2>{{ .Title }}</h2>
-          <h5>{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}</h5>
+          <h1>{{ .Title }}</h1>
       </header>
-
+      <p class="dateFormat">
+        <em>{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}</em>
+      </p>
       {{ .Content }}
 
       {{ partial "tags" . }}
