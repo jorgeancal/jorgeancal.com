@@ -1,0 +1,24 @@
+<section class="container list col-sm-12 col-lg-9 themed-grid-col">
+  {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") .Site.Params.paginate }}
+  {{ range $paginator.Pages }}
+    <article class="theBorder">
+      <div class="blogonthelist">
+        <em>{{ partial "tags" . }}</em>
+        <header>
+          <h3 class="title"><a href="{{ .Params.ExternalLink | default .RelPermalink }}">{{ .Title }}</a></h3>
+        </header>
+        <div>
+        <div class="dateFormat text-right">
+          <span class="datedetails">{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</span>
+        </div>
+        <p>{{ .Description }}</p>
+        <div class="readmore">
+            <a href="{{ .Params.ExternalLink | default .RelPermalink }}">Continue Reading →</a>
+        </div>
+        </div>
+      </div>
+    </article>
+  {{ end }}
+
+  {{ partial "paginator" . }}
+</section>

@@ -1,0 +1,32 @@
+{{ partial "header" . }}
+
+<main class="container">
+  <div class="row">
+    {{ partial "author" . }}
+
+    <article class="col-sm-12 col-lg-9 themed-grid-col">
+      <header>
+          <h2>{{ .Title }}</h2>
+          <h5>{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}</h5>
+      </header>
+
+      {{ .Content }}
+
+      {{ partial "tags" . }}
+      <!-- Disquis comments -->
+      {{ if and .Site.DisqusShortname (not .Params.disableComments) }}
+        <div class="comments">
+          <h4 class="page-header">Comments</h4>
+          <div>
+            {{ template "_internal/disqus.html" . }}
+          </div>
+        </div>
+      {{ end }}
+    </article>
+
+    </div>
+
+
+</main>
+
+{{ partial "footer" . }}
