@@ -9,11 +9,11 @@
     <img class="rounded-circle" src = "{{ .Site.Params.avatar }}" />
   </div>
   <p>{{ .Site.Params.description}}<p>
-  <ul class="align-self-center">
+  <ul class="nav navbar-nav align-self-center">
     {{ if .Site.Menus.icon }}
       {{ range sort .Site.Menus.icon }}
-       <li class="">
-         <a class="" href="{{ .URL }}" target="_blank" >
+       <li class="nav-item">
+         <a href="{{ .URL }}" target="_blank" >
             <span class="fab fa-{{.Name}}"></span>
           </a>
         </li>
