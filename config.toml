@@ -5,6 +5,7 @@ theme = "minimal"
 disqusShortname = "jorgeancal.com" # delete this to disable disqus comments
 googleAnalytics = "UA-108421112-1"
 publishDir="docs"
+
 [params]
     avatar = "/images/avatar.png"
     author = "Jorge Andreu Calatayud"
@@ -22,8 +23,7 @@ publishDir="docs"
     ico = "/images/j.png"
     font = "Raleway" # should match the name on Google Fonts!
     mathJax = true
-    highlight = true
-    highlightStyle = "dracula"
+    highlight = false
     highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift", "java", "bash"]
     copyright = "@jorgeancal | Jorge Andreu Calatayud"
 [[menu.main]]

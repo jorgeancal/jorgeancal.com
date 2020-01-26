@@ -85,7 +85,7 @@ After that, we have to go to the template of our component and put the function 
 ```
 When you press it, the promise is running, so after that you have to open your browser console and you’re going to see something like that:
 
-![console](/images/promises/angular5Console.png)
+![console #incenter](/images/promises/angular5Console.png)
 
 This was everything, I hope it was useful for someone and sorry for my English.
 
