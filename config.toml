@@ -2,7 +2,6 @@ baseURL = "https://jorgeancal.com/"
 languageCode = "en"
 title = "The Green Notebook"
 theme = "minimal"
-disqusShortname = "jorgeancal.com" # delete this to disable disqus comments
 googleAnalytics = "UA-108421112-1"
 publishDir="docs"
 
