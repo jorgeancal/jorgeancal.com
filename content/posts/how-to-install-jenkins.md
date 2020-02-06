@@ -52,20 +52,20 @@ When you’ve got it, open a browser and go to the Jenkins. You’ll have someth
 
 Afterthat, go to that file and paste in that input, we’re going to customize the Jenkins. Oops… almost forgot. The password is here: “/var/lib/jenkins/secrets/initialAdminPassword”. After that, we must choose between two options:
 
-![jenkis #incenter](/images/jenkis/custom.png)
+![jenkins #incenter](/images/jenkis/custom.png)
 
 I usually select the suggested option, but this time I’m going to try the other one. After clicking on it, you’re going to have the next window:
 
-![jenkis #incenter](/images/jenkis/theStarted.png)
+![jenkins #incenter](/images/jenkis/theStarted.png)
 
 You can select all of them if you want or just read them all and select the ones you want. I installed the suggested ones, and I added some other ones, such as JUnit, Warnings, ssh plugins and all of the plugins from Git. One more thing, you can check all the dependencies for each plugin if you click on the number with the row. You can see this on the previous screenshot in the first plugin. When you’ve finished selecting all the plugins which you want to install, click on install and wait. You are going to have an installation screen, as you can see in the next screenshot:
 
-![jenkis #incenter](/images/jenkis/theInstallation.png)
+![jenkins #incenter](/images/jenkis/theInstallation.png)
 
 After that, you can add a user or just continue as admin. I recommend adding an Admin user.
 
-![jenkis #incenter](/images/jenkis/jenkis1.png)
+![jenkins #incenter](/images/jenkis/jenkis1.png)
 
 After that, you have to decide the Jenkins URL that you want. You’re going to wonder why I need this. As this is a test server, I’m going to leave it like that, but in my own jenkins the URL is something like that `https://myBarMan.jorgeancal.com:6669`. After choosing the URL, you’re done with the installation, so enjoy your Jenkins!
 
-![jenkis #thumbinline2](/images/jenkis/jenkis2.png) ![jenkis #thumbinline2](/images/jenkis/jenkis3-1.png)
+![jenkins #thumbinline2](/images/jenkis/jenkis2.png) ![jenkis #thumbinline2](/images/jenkis/jenkis3-1.png)
