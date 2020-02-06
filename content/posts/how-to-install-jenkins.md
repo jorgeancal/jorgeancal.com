@@ -19,7 +19,7 @@ I think most people who search about these terms knows about Jenkins, but I’m 
 I think explaining these terms you can see why we use it. I’m really interested in working with it, because I think you can have more control in the product which we are developing. Because I’m using it now in my work, but I think we’re not using it correctly, but that is another matter.
 Installing Jenkins on Debian 9
 
-There are a few ways to install it (Docker, War and apt).  For these things I’m a bit weird and I prefer to install it via apt. Well the first thing I have to say is log in with root user and add the key of the package repository:
+There are a few ways to install it (Docker, War and apt). For these things I’m a bit weird, and I prefer to install it via apt. Well the first thing I have to say is log in with root user and add the key of the package repository:
 
 ```bash
 wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | apt-key add -
