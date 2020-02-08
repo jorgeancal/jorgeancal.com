@@ -19,7 +19,7 @@ I think most people who search about these terms knows about Jenkins, but I’m 
 I think explaining these terms you can see why we use it. I’m really interested in working with it, because I think you can have more control in the product which we are developing. Because I’m using it now in my work, but I think we’re not using it correctly, but that is another matter.
 Installing Jenkins on Debian 9
 
-There are a few ways to install it (Docker, War and apt).  For these things I’m a bit weird and I prefer to install it via apt. Well the first thing I have to say is log in with root user and add the key of the package repository:
+There are a few ways to install it (Docker, War and apt). For these things I’m a bit weird, and I prefer to install it via apt. Well the first thing I have to say is log in with root user and add the key of the package repository:
 
 ```bash
 wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | apt-key add -
@@ -47,25 +47,25 @@ There you have it. Enjoy your Jenkins. But don’t leave here yet. There’s mor
 When you’ve got it, open a browser and go to the Jenkins. You’ll have something like that:
 
 
-![jenkis #incenter](/images/jenkis/jenkis.png)
+![jenkis #incenter](/images/jenkins/jenkins.png)
 
 
 Afterthat, go to that file and paste in that input, we’re going to customize the Jenkins. Oops… almost forgot. The password is here: “/var/lib/jenkins/secrets/initialAdminPassword”. After that, we must choose between two options:
 
-![jenkis #incenter](/images/jenkis/custom.png)
+![jenkins #incenter](/images/jenkins/custom.png)
 
 I usually select the suggested option, but this time I’m going to try the other one. After clicking on it, you’re going to have the next window:
 
-![jenkis #incenter](/images/jenkis/theStarted.png)
+![jenkins #incenter](/images/jenkins/theStarted.png)
 
 You can select all of them if you want or just read them all and select the ones you want. I installed the suggested ones, and I added some other ones, such as JUnit, Warnings, ssh plugins and all of the plugins from Git. One more thing, you can check all the dependencies for each plugin if you click on the number with the row. You can see this on the previous screenshot in the first plugin. When you’ve finished selecting all the plugins which you want to install, click on install and wait. You are going to have an installation screen, as you can see in the next screenshot:
 
-![jenkis #incenter](/images/jenkis/theInstallation.png)
+![jenkins #incenter](/images/jenkins/theInstallation.png)
 
 After that, you can add a user or just continue as admin. I recommend adding an Admin user.
 
-![jenkis #incenter](/images/jenkis/jenkis1.png)
+![jenkins #incenter](/images/jenkins/jenkins1.png)
 
 After that, you have to decide the Jenkins URL that you want. You’re going to wonder why I need this. As this is a test server, I’m going to leave it like that, but in my own jenkins the URL is something like that `https://myBarMan.jorgeancal.com:6669`. After choosing the URL, you’re done with the installation, so enjoy your Jenkins!
 
-![jenkis #thumbinline2](/images/jenkis/jenkis2.png) ![jenkis #thumbinline2](/images/jenkis/jenkis3-1.png)
+![jenkins #thumbinline2](/images/jenkins/jenkins2.png) ![jenkis #thumbinline2](/images/jenkins/jenkins3-1.png)
