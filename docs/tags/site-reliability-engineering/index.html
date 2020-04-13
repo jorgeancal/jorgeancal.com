@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ 
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <title>
+Site Reliability Engineering</title>
+  
+<link rel="stylesheet" href="https://jorgeancal.com/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/default.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+ 
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script><script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.68.3" />  <link href="/tags/site-reliability-engineering/index.xml" rel="alternate" type="application/rss&#43;xml" title="The Green Notebook" />
+ <link href="/tags/site-reliability-engineering/index.xml" rel="feed" type="application/rss&#43;xml" title="The Green Notebook" />
+ 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108421112-1">
+</script>
+ <script>
+ window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config', 'UA-108421112-1'); </script>
+ 
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+ 
+ 
+
+</head>
+
+ <body class="notebook" id="notebook">
+ 
+
+   <header>
+     <nav class="mb-1 navbar navbar-expand-lg default-color">
+       <a class="navbar-brand" href="/">
+         The Green Notebook
+       </a>
+       <button class="navbar-toggler waves-effect waves-light" type="button" data-toggle="collapse" data-target="#mynav" >
+         <i class="fas fa-bars"></i>
+       </button>
+       <div class="collapse navbar-collapse" id="mynav">
+         <ul class="navbar-nav mr-auto">
+           
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/about-me/">About me</a>
+              </li>
+            
+              <li class="nav-item">
+                <a class="nav-link" href="/about-this-site/">About This Site</a>
+              </li>
+            
+           
+         </ul>
+         <ul class="nav navbar-nav navbar-right ml-auto">
+           
+            
+            <li class="nav-item">
+              <a class="nav-link waves-effect waves-light" href="https://github.com/jorgeancal/" target="_blank" >
+                <span class="fab fa-github"></span>
+              </a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link waves-effect waves-light" href="https://twitter.com/jorgeancal/" target="_blank" >
+                <span class="fab fa-twitter"></span>
+              </a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link waves-effect waves-light" href="https://www.linkedin.com/in/jorgeancal/" target="_blank" >
+                <span class="fab fa-linkedin"></span>
+              </a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link waves-effect waves-light" href="https://www.instagram.com/jorgeancal/" target="_blank" >
+                <span class="fab fa-instagram"></span>
+              </a>
+            </li>
+           
+          
+         </ul>
+       </div>
+    </nav>
+  </header>
+
+<main class="container">
+  <div class="row">
+    <section class="col-12 col-lg-3 themed-grid-col">
+  <div class="about">
+  
+  <h2>Jorge Andreu Calatayud</h2>
+  <h3>IT Engineer</h3>
+  <div class="avatar">
+    <img class="rounded-circle" src = "/images/avatar.png" />
+  </div>
+  <p>Hi, My name is Jorge Andreu Calatayud and sorry for my English. I’m an IT Engineer. I studied a Bachelor of Science in Business Information Technology, with University of Wales.<p>
+  <ul class="nav navbar-nav align-self-center">
+    
+      
+       <li class="nav-item">
+         <a href="https://github.com/jorgeancal/" target="_blank" >
+            <span class="fab fa-github"></span>
+          </a>
+        </li>
+      
+       <li class="nav-item">
+         <a href="https://twitter.com/jorgeancal/" target="_blank" >
+            <span class="fab fa-twitter"></span>
+          </a>
+        </li>
+      
+       <li class="nav-item">
+         <a href="https://www.linkedin.com/in/jorgeancal/" target="_blank" >
+            <span class="fab fa-linkedin"></span>
+          </a>
+        </li>
+      
+       <li class="nav-item">
+         <a href="https://www.instagram.com/jorgeancal/" target="_blank" >
+            <span class="fab fa-instagram"></span>
+          </a>
+        </li>
+      
+    
+  </ul>
+<div>
+</section>
+
+    <section class="container list col-sm-12 col-lg-9 themed-grid-col">
+    <h2>Site reliability engineering</h2>
+
+    
+      <div class="item">
+
+    
+
+    
+      
+
+    <h4><a href="">From Mid Level Java Developer to SRE</a></h4>
+    <h5>That&#39;s why I decided to change to SRE from JAVA developer. I&#39;m not quite sure about this still, because I love being a developer... but at the moment I like it and it&#39;s an awesome opportunity which I&#39;m not going to let this opportunity pass me by.</h5>
+    
+<a href="https://jorgeancal.com/tags/sre"><kbd class="item-tag">SRE</kbd></a>
+
+<a href="https://jorgeancal.com/tags/site-reliability-engineering"><kbd class="item-tag">Site Reliability Engineering</kbd></a>
+
+<a href="https://jorgeancal.com/tags/from-developer-to-sre"><kbd class="item-tag">From Developer to SRE</kbd></a>
+
+<a href="https://jorgeancal.com/tags/reasons"><kbd class="item-tag">Reasons</kbd></a>
+
+<a href="https://jorgeancal.com/tags/new-steps"><kbd class="item-tag">New Steps</kbd></a>
+
+<a href="https://jorgeancal.com/tags/becoming-a-junior-again"><kbd class="item-tag">becoming a Junior again</kbd></a>
+
+<a href="https://jorgeancal.com/tags/from-scratch"><kbd class="item-tag">From Scratch?</kbd></a>
+
+<a href="https://jorgeancal.com/tags/java-developer"><kbd class="item-tag">Java Developer</kbd></a>
+
+<a href="https://jorgeancal.com/tags/developer"><kbd class="item-tag">Developer</kbd></a>
+
+
+
+</div>
+
+    
+    
+
+
+    </section>
+</main>
+
+        <footer class="footer">
+          <div class="container">
+            <p class="copyright text-muted">@jorgeancal | Jorge Andreu Calatayud</p>
+          </div>
+
+        </footer>
+
+        
+
+
+    </body>
+
+</html>
+
