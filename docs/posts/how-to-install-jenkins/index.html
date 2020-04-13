@@ -25,7 +25,7 @@ How to Install Jenkins</title>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script><script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.63.2" /> 
+ <meta name="generator" content="Hugo 0.68.3" /> 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108421112-1">
 </script>
  <script>
@@ -159,7 +159,7 @@ What’s Jenkins?</p>
 <p>I think most people who search about these terms knows about Jenkins, but I’m going to explain it too in a few words. Continuous Integration, CI, is the process of automating the building and testing of the code every time the team upload the code to the control repository. Continuous Delivery, CD, is the process which builds, tests, configures and deploys from a test to a production environment.</p>
 <p>I think explaining these terms you can see why we use it. I’m really interested in working with it, because I think you can have more control in the product which we are developing. Because I’m using it now in my work, but I think we’re not using it correctly, but that is another matter.
 Installing Jenkins on Debian 9</p>
-<p>There are a few ways to install it (Docker, War and apt).  For these things I’m a bit weird and I prefer to install it via apt. Well the first thing I have to say is log in with root user and add the key of the package repository:</p>
+<p>There are a few ways to install it (Docker, War and apt). For these things I’m a bit weird, and I prefer to install it via apt. Well the first thing I have to say is log in with root user and add the key of the package repository:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | apt-key add -
 </code></pre></div><p>Now we have to add the package repository in the source list, there are two ways, so choose whichever you want. I’m going to use the first one.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sh -c <span style="color:#e6db74">&#39;echo deb http://pkg.jenkins.io/debian-stable binary/ &gt; /etc/apt/sources.list.d/jenkins.list&#39;</span>
@@ -170,17 +170,17 @@ Installing Jenkins on Debian 9</p>
 </code></pre></div><p>There you have it. Enjoy your Jenkins. But don’t leave here yet. There’s more.  I guess everyone has a Tomcat in the server or something in the 8080 port, so you must to go to the Jenkins conf file which is in “/etc/default/jenkins” and go to line 63, in that line you can configure the port, so change it. I usually use weird ports like 6669, or something like that. After that, you need to restart the service, so run the next command:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/etc/init.d/jenkins restart
 </code></pre></div><p>When you’ve got it, open a browser and go to the Jenkins. You’ll have something like that:</p>
-<p><img src="/images/jenkis/jenkis.png" alt="jenkis #incenter"></p>
+<p><img src="/images/jenkins/jenkins.png" alt="jenkis #incenter"></p>
 <p>Afterthat, go to that file and paste in that input, we’re going to customize the Jenkins. Oops… almost forgot. The password is here: “/var/lib/jenkins/secrets/initialAdminPassword”. After that, we must choose between two options:</p>
-<p><img src="/images/jenkis/custom.png" alt="jenkis #incenter"></p>
+<p><img src="/images/jenkins/custom.png" alt="jenkins #incenter"></p>
 <p>I usually select the suggested option, but this time I’m going to try the other one. After clicking on it, you’re going to have the next window:</p>
-<p><img src="/images/jenkis/theStarted.png" alt="jenkis #incenter"></p>
+<p><img src="/images/jenkins/theStarted.png" alt="jenkins #incenter"></p>
 <p>You can select all of them if you want or just read them all and select the ones you want. I installed the suggested ones, and I added some other ones, such as JUnit, Warnings, ssh plugins and all of the plugins from Git. One more thing, you can check all the dependencies for each plugin if you click on the number with the row. You can see this on the previous screenshot in the first plugin. When you’ve finished selecting all the plugins which you want to install, click on install and wait. You are going to have an installation screen, as you can see in the next screenshot:</p>
-<p><img src="/images/jenkis/theInstallation.png" alt="jenkis #incenter"></p>
+<p><img src="/images/jenkins/theInstallation.png" alt="jenkins #incenter"></p>
 <p>After that, you can add a user or just continue as admin. I recommend adding an Admin user.</p>
-<p><img src="/images/jenkis/jenkis1.png" alt="jenkis #incenter"></p>
+<p><img src="/images/jenkins/jenkins1.png" alt="jenkins #incenter"></p>
 <p>After that, you have to decide the Jenkins URL that you want. You’re going to wonder why I need this. As this is a test server, I’m going to leave it like that, but in my own jenkins the URL is something like that <code>https://myBarMan.jorgeancal.com:6669</code>. After choosing the URL, you’re done with the installation, so enjoy your Jenkins!</p>
-<p><img src="/images/jenkis/jenkis2.png" alt="jenkis #thumbinline2"> <img src="/images/jenkis/jenkis3-1.png" alt="jenkis #thumbinline2"></p>
+<p><img src="/images/jenkins/jenkins2.png" alt="jenkins #thumbinline2"> <img src="/images/jenkins/jenkins3-1.png" alt="jenkis #thumbinline2"></p>
 
 
       

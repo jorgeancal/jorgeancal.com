@@ -3,6 +3,71 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jorgeancal.com/tags/becoming-a-junior-again/</loc>
+    <lastmod>2020-04-13T11:15:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgeancal.com/tags/developer/</loc>
+    <lastmod>2020-04-13T11:15:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgeancal.com/tags/from-developer-to-sre/</loc>
+    <lastmod>2020-04-13T11:15:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgeancal.com/posts/from-mid-level-java-developer-to-site-reliability-engineering/</loc>
+    <lastmod>2020-04-13T11:15:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgeancal.com/tags/from-scratch/</loc>
+    <lastmod>2020-04-13T11:15:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgeancal.com/tags/java/</loc>
+    <lastmod>2020-04-13T11:15:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgeancal.com/tags/java-developer/</loc>
+    <lastmod>2020-04-13T11:15:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgeancal.com/tags/new-steps/</loc>
+    <lastmod>2020-04-13T11:15:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgeancal.com/posts/</loc>
+    <lastmod>2020-04-13T11:15:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgeancal.com/tags/reasons/</loc>
+    <lastmod>2020-04-13T11:15:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgeancal.com/tags/site-reliability-engineering/</loc>
+    <lastmod>2020-04-13T11:15:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgeancal.com/tags/sre/</loc>
+    <lastmod>2020-04-13T11:15:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgeancal.com/tags/</loc>
+    <lastmod>2020-04-13T11:15:23+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jorgeancal.com/categories/</loc>
     <lastmod>2020-01-23T23:10:39+00:00</lastmod>
   </url>
@@ -18,22 +83,17 @@
   </url>
   
   <url>
-    <loc>https://jorgeancal.com/posts/</loc>
-    <lastmod>2020-01-23T23:10:39+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jorgeancal.com/tags/spring/</loc>
     <lastmod>2020-01-23T23:10:39+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jorgeancal.com/categories/spring-boot/</loc>
+    <loc>https://jorgeancal.com/tags/spring-boot/</loc>
     <lastmod>2020-01-23T23:10:39+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jorgeancal.com/tags/spring-boot/</loc>
+    <loc>https://jorgeancal.com/categories/spring-boot/</loc>
     <lastmod>2020-01-23T23:10:39+00:00</lastmod>
   </url>
   
@@ -58,22 +118,7 @@
   </url>
   
   <url>
-    <loc>https://jorgeancal.com/tags/</loc>
-    <lastmod>2020-01-23T23:10:39+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jorgeancal.com/</loc>
-    <lastmod>2020-01-23T23:10:39+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jorgeancal.com/tags/adoptopenjdk/</loc>
-    <lastmod>2020-01-23T23:08:17+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jorgeancal.com/tags/java/</loc>
     <lastmod>2020-01-23T23:08:17+00:00</lastmod>
   </url>
   
@@ -279,6 +324,11 @@
   
   <url>
     <loc>https://jorgeancal.com/about-this-site/</loc>
+    <lastmod>2020-01-20T13:44:54+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgeancal.com/</loc>
     <lastmod>2020-01-20T13:44:54+00:00</lastmod>
   </url>
   
