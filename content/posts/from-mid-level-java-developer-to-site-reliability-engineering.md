@@ -1,5 +1,5 @@
 +++
-title="From Mid Level Java Developer to Site Reliability Engineering"
+title="From Mid Level Java Developer to SRE"
 date=2020-04-13T11:15:23+01:00
 draft=false
 description="That's why I decided to change to SRE from JAVA developer. I'm not quite sure about this still, because I love being a developer... but at the moment I like it and it's an awesome opportunity which I'm not going to let this opportunity pass me by."
