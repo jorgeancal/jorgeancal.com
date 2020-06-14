@@ -6,10 +6,21 @@
     <description>Recent content in Posts on The Green Notebook</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 13 Apr 2020 11:15:23 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2020 16:00:01 +0100</lastBuildDate>
     
 	<atom:link href="https://jorgeancal.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Create a Small JRE for your Microservices</title>
+      <link>https://jorgeancal.com/posts/how-to-create-a-small-jvm-docker-image/</link>
+      <pubDate>Sun, 14 Jun 2020 16:00:01 +0100</pubDate>
+      
+      <guid>https://jorgeancal.com/posts/how-to-create-a-small-jvm-docker-image/</guid>
+      <description>In this post you&amp;rsquo;ll learn about how to create a small JRE for your microservices.
+Firstly you are going to need a java project. So you have to go to your root folder project. When you are there you have to run the next command:
+jdeps --list-deps {{jar-name}}.jar This command is going to give us a list of modules that we are using in our java microservice. I&amp;rsquo;m running this again to hello-world java service, so I&amp;rsquo;m not going to have that many dependencies.</description>
+    </item>
     
     <item>
       <title>From Mid Level Java Developer to SRE</title>

@@ -3,6 +3,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jorgeancal.com/tags/docker/</loc>
+    <lastmod>2020-06-14T16:00:01+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgeancal.com/tags/dockerimages/</loc>
+    <lastmod>2020-06-14T16:00:01+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgeancal.com/posts/how-to-create-a-small-jvm-docker-image/</loc>
+    <lastmod>2020-06-14T16:00:01+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgeancal.com/tags/java/</loc>
+    <lastmod>2020-06-14T16:00:01+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgeancal.com/tags/jdk/</loc>
+    <lastmod>2020-06-14T16:00:01+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgeancal.com/tags/jre/</loc>
+    <lastmod>2020-06-14T16:00:01+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgeancal.com/tags/jvm/</loc>
+    <lastmod>2020-06-14T16:00:01+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgeancal.com/tags/openjdk/</loc>
+    <lastmod>2020-06-14T16:00:01+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgeancal.com/posts/</loc>
+    <lastmod>2020-06-14T16:00:01+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgeancal.com/tags/</loc>
+    <lastmod>2020-06-14T16:00:01+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgeancal.com/</loc>
+    <lastmod>2020-06-14T16:00:01+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jorgeancal.com/tags/becoming-a-junior-again/</loc>
     <lastmod>2020-04-13T11:15:23+01:00</lastmod>
   </url>
@@ -28,22 +83,12 @@
   </url>
   
   <url>
-    <loc>https://jorgeancal.com/tags/java/</loc>
-    <lastmod>2020-04-13T11:15:23+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jorgeancal.com/tags/java-developer/</loc>
     <lastmod>2020-04-13T11:15:23+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://jorgeancal.com/tags/new-steps/</loc>
-    <lastmod>2020-04-13T11:15:23+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jorgeancal.com/posts/</loc>
     <lastmod>2020-04-13T11:15:23+01:00</lastmod>
   </url>
   
@@ -59,11 +104,6 @@
   
   <url>
     <loc>https://jorgeancal.com/tags/sre/</loc>
-    <lastmod>2020-04-13T11:15:23+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jorgeancal.com/tags/</loc>
     <lastmod>2020-04-13T11:15:23+01:00</lastmod>
   </url>
   
@@ -123,11 +163,6 @@
   </url>
   
   <url>
-    <loc>https://jorgeancal.com/tags/jdk/</loc>
-    <lastmod>2020-01-23T23:08:17+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jorgeancal.com/tags/jdk-11/</loc>
     <lastmod>2020-01-23T23:08:17+00:00</lastmod>
   </url>
@@ -149,11 +184,6 @@
   
   <url>
     <loc>https://jorgeancal.com/tags/jdk-8/</loc>
-    <lastmod>2020-01-23T23:08:17+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jorgeancal.com/tags/openjdk/</loc>
     <lastmod>2020-01-23T23:08:17+00:00</lastmod>
   </url>
   
@@ -324,11 +354,6 @@
   
   <url>
     <loc>https://jorgeancal.com/about-this-site/</loc>
-    <lastmod>2020-01-20T13:44:54+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jorgeancal.com/</loc>
     <lastmod>2020-01-20T13:44:54+00:00</lastmod>
   </url>
   
