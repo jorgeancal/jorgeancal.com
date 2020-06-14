@@ -1,15 +1,14 @@
 +++
-title: "How to Create a Small Jvm Docker Image"
-date: 2020-02-21T23:23:01Z
-draft: true
-type = "posts"
+title = "How to Create a Small Jvm Docker Image"
+date = 2020-06-14T16:00:01
 draft = false
+type = "posts"
 comments = true
-description = "Here, you will learn about how to create a smalls images for your microservices. "
-tags= ["java", "kotlin", "Dockerimages", "Docker", "jvm", "jre"]
+description = "Here, you will learn about how to create a small JRE for your microservices. "
+tags= ["java", "openjdk", "jdk", "DockerImages", "Docker", "jvm", "jre"]
 +++
 
-In this post you'll learn about how to create a small images for your microservices. we are going to do two different things. First we are going to create two different images, we are going to create a base image, and then we'll create an image for the service.
+In this post you'll learn about how to create a small JRE for your microservices. we are going to do two different things. First we are going to create two different images, we are going to create a base image, and then we'll create an image for the service.
 
 Firstly you are going to need a java project. So you have to go to your root folder project. When you are there you have to run the next command:
 ```shell script
@@ -27,7 +26,9 @@ $ jdeps --list-deps hello-0.0.1-SNAPSHOT.jar
 The previous output is going to tell us which modules we are using in the jar. Now we need to crate our JRE. 
 
 ```Shell script
-$ jlink --module-path /opt/java/jmods --compress=2 --strip-debug --no-header-files --no-man-pages --add-modules java.base,java.logging --output /opt/jlink 
+$ jlink --module-path /opt/java/jmods --compress=2 --strip-debug \
+  --no-header-files --no-man-pages \
+  --add-modules java.base,java.logging --output /opt/jlink 
 ```
 
 Now, we have our runtime in `/opt/jlink` folder that we can use to run our application and this folder is going to be around 30 Mb instead of 240 Mb which is the normal size of the JDK. 
