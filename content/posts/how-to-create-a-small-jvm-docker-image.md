@@ -1,5 +1,5 @@
 +++
-title = "How to Create a Small Jvm Docker Image"
+title = "How to Create a Small JRE for your Microservices"
 date = 2020-06-14T16:00:01
 draft = false
 type = "posts"
@@ -8,7 +8,7 @@ description = "Here, you will learn about how to create a small JRE for your mic
 tags= ["java", "openjdk", "jdk", "DockerImages", "Docker", "jvm", "jre"]
 +++
 
-In this post you'll learn about how to create a small JRE for your microservices. we are going to do two different things. First we are going to create two different images, we are going to create a base image, and then we'll create an image for the service.
+In this post you'll learn about how to create a small JRE for your microservices.
 
 Firstly you are going to need a java project. So you have to go to your root folder project. When you are there you have to run the next command:
 ```shell script
