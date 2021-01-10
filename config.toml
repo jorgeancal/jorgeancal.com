@@ -27,7 +27,7 @@ publishDir="docs"
 
         [[params.contact.list]]
         icon = "fas fa-envelope-square"
-        url = "mailto:#"
+        url = "mailto:contact@jorgeancal.com"
         text = "contact@jorgeancal.com"
         [[params.contact.list]]
         icon = "fas fa-globe"
