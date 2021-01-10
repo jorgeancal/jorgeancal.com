@@ -1,69 +1,238 @@
+# Page settings
+
 baseURL = "https://jorgeancal.com/"
 languageCode = "en"
-title = "The Green Notebook"
-theme = "minimal"
+title = " My CV | Jorge Andreu Calatayud"
+theme = "hugo-devresume-theme"
 googleAnalytics = "UA-108421112-1"
-publishDir="docs"
+
 
 [params]
-    avatar = "/images/avatar.png"
     author = "Jorge Andreu Calatayud"
     description = "Hi, My name is Jorge Andreu Calatayud and sorry for my English. I’m an IT Engineer. I studied a Bachelor of Science in Business Information Technology, with University of Wales."
-    info = "IT Engineer"
-    githubUsername = "jorgeancal"
-    pagesToShowInTheBeginningOfThePageable = 1
-    pagesInTheMiddle = 1
-    addPagesToShowInTheMiddle = 1
-    pageMin = 1
-    accent = "gren"
-    paginate = 3
-    showBorder = true
-    backgroundColor = "white"
-    ico = "/images/j.png"
-    font = "Raleway" # should match the name on Google Fonts!
-    mathJax = true
-    highlight = false
-    highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift", "java", "bash"]
-    copyright = "@jorgeancal | Jorge Andreu Calatayud"
-[[menu.main]]
-    url = "/"
-    name = "Home"
-    weight = 1
 
-[[menu.main]]
-    url = "/about-me/"
-    name = "About me"
-    weight = 2
+    primaryColor = "#2f5233"
+    textPrimaryColor = "#292929"
 
-[[menu.main]]
-    url = "/about-this-site/"
-    name = "About This Site"
-    weight = 3
+    [params.profile]
+        enable = true
+        name = "Jorge Andreu"
+        tagline = "Site Reliability Engineer"
+        avatar = "jorge.png"
 
-# Social icons to be shown on the right-hand side of the navigation bar.
-# The "name" field should match the name of the icon in Font Awesome.
-# The list of available icons can be found at http://fontawesome.io/icons.
 
-[[menu.icon]]
-    url = "https://github.com/jorgeancal/"
-    name = "github"
-    weight = 1
+    [params.contact]
+        enable = true
+        location = "Brighton, UK"
 
-[[menu.icon]]
-    url = "https://twitter.com/jorgeancal/"
-    name = "twitter"
-    weight = 2
+        [[params.contact.list]]
+        icon = "fas fa-envelope-square"
+        url = "mailto:#"
+        text = "contact@jorgeancal.com"
+        [[params.contact.list]]
+        icon = "fas fa-globe"
+        url = "#"
+        text = "www.jorgeancal.com"
 
-[[menu.icon]]
-    url = "https://www.linkedin.com/in/jorgeancal/"
-    name = "linkedin"
-    weight = 3
-[[menu.icon]]
-    url = "https://www.instagram.com/jorgeancal/"
-    name = "instagram"
-    weight = 4
+    [params.skills]
+        enable = true
 
-#[[menu.icon]]
-    #url = "https://www.stackoverflow.com/username/"
-    #name = "stack-overflow"
-    #weight = 4
+        [[params.skills.list]]
+        title = "Technical"
+        [[params.skills.list.items]]
+        details = "JDK 1.8/JDK 9-15/Spring Boot"
+        [[params.skills.list.items]]
+        details = "JavaScript/Angular 2/AngularJS/Ionic"
+        [[params.skills.list.items]]
+        details = "Python/PHP"
+        [[params.skills.list.items]]
+        details = "Node.js/ASP.NET"
+        [[params.skills.list.items]]
+        details = "Web Server (Apache2, Glassfish)"
+        [[params.skills.list.items]]
+        details = "Object-oriented design"
+        [[params.skills.list.items]]
+        details = "DB Server (MySQL, Oracle, SQL Server)"
+        [[params.skills.list.items]]
+        details = "HTML/CSS/Bootstrap"
+        [[params.skills.list.items]]
+        details = "Agile methodology/Scrum"
+
+        [[params.skills.list]]
+        title = "Professional"
+        [[params.skills.list.items]]
+        details = "Team player"
+        [[params.skills.list.items]]
+        details = "Strong problem solver"
+        [[params.skills.list.items]]
+        details = "Good time management"
+        [[params.skills.list.items]]
+        details = "Effective communication"
+
+
+    [params.education]
+        enable = true
+
+        [[params.education.list]]
+        degree = "B.Sc. in BUSINESS INFORMATION TECHNOLOGY"
+        university = "University of Wales"
+        dates = "2013 - June 2017"
+
+
+    [params.awards]
+        enable = true
+
+        [[params.awards.list]]
+        name = "Winner of IV Teaching Innovation Day of San Jorge University"
+        body = "Certificate granted express recognition for the quality of pedagogical approach, its impact on student learning and its potential as an innovative practice in the classroom, to the best Practice (Non-University Education category): Road to the division."
+        date = "2014"
+
+
+    [params.languages]
+        enable = true
+
+        [[params.languages.list]]
+        name = "Spanish"
+        level = "Native"
+        [[params.languages.list]]
+        name = "English"
+        level = "Professional"
+
+
+
+    [params.interests]
+        enable = true
+
+        [[params.interests.list]]
+        name = "Photography"
+        [[params.interests.list]]
+        name = "Basketball"
+        [[params.interests.list]]
+        name = "Travelling"
+        [[params.interests.list]]
+        name = "Reading"
+
+
+
+    [params.summary]
+        enable = true
+        text = "A highly motivated individual who is confident in leading, working with a team, learning quickly and adapting to any situation. A software developer with 9 years of experience who enjoys the energy and the intensity that is associated with the world of technology."
+
+
+    [params.experience]
+        enable = true
+
+        [[params.experience.list]]
+        title = "Site Reliability Engineer"
+        dates = "2020 – Present"
+        company = "Crunch"
+        details = "Crunch is a medium-sized business whose main product is an accounting software. In this business I was given the opportunity to work as a Site Reliability Engineer and I took it. The role says Site Reliability Engineer but I also do devops and sysadmin work."
+        [[params.experience.list.items]]
+        details = "I have migrated the cluster from helm 2 to helm 3 without downtime"
+        [[params.experience.list.items]]
+        details = "We were using Landscaper and we have changed it to helmfile"
+        [[params.experience.list.items]]
+        details = "I am working on implementing Istio in our Clusters"
+
+        [[params.experience.list]]
+        title = " Java Developer"
+        dates = "2019 – 2020"
+        company = "Crunch"
+        details = "Crunch is a medium-sized business whose main product is an accounting software."
+        [[params.experience.list.items]]
+        details = "We migrated the old security system to Java Services"
+        [[params.experience.list.items]]
+        details = "We were using a Spring Boot services in cluster but the Software System is based in docker"
+
+        [[params.experience.list]]
+        title = "Senior Java Developer"
+        dates = "2018-2019"
+        company = "Exis-TI (Indra)"
+        details = "I was hired by Exis-TI for working in Indra. Indra is a big business which has a lot of branches around the world."
+        [[params.experience.list.items]]
+        details = "I was working in a project for the Ministry of Agriculture of Cataluña. In this project, we were using Spring, Oracle SQL, AngularJS. My role in this project was Full Stack. I have to say that there was a lot of work in the Backend and I did some work in the front. The Java JDK that we were using was 1.8."
+
+        [[params.experience.list]]
+        title = "Senior Java Developer"
+        dates = "2017 - 2018"
+        company = "Hiberus Tecnologia"
+        details = "Hiberus Tecnologia is a big business which has various branches in Spain and one in the U.K. It works with a number of businesses in Spain and some of them are well-renowned like FOX, Simply, Vodafone, Movistar, Amadeus, Ibercaja, and many others."
+        [[params.experience.list.items]]
+        details = "I built Java web services, one application on Angularjs and one application on Ionic."
+        [[params.experience.list.items]]
+        details = "I was in a section of the company which was working for Travel-IMS, a branch of Amadeus which carries out work for many travel companies. I was full stack and I used EJB, JSF, Angular and Spring. But due to the large workload of the old application, since we were still selling both versions of the app. I worked more with JSF and EJB."
+
+        [[params.experience.list]]
+        title = "Senior Developer"
+        dates = "2016-2017"
+        company = "CPS Ingenieros"
+        details = "CPS Ingenieros Obra Civil y Medio Ambiente S.L. is a medium-sized business which manages some branches of the General Direction of Traffic. The headquarters are situated in Valencia."
+        [[params.experience.list.items]]
+        details = "I built Java desk programs and Java web services. These projects were about roads and traffic-related matters."
+        [[params.experience.list.items]]
+        details = "I was in charge of a project which used spring web."
+        [[params.experience.list]]
+        title = "Junior Developer"
+        dates = "2012-2015"
+        company = "Soluciones Informáticas Netymedia"
+        details = "Netymedia is a small business that develops websites and custom applications."
+        [[params.experience.list.items]]
+        details = "Various projects and management of two servers: Linux Debian 8, Windows Server 2003."
+        [[params.experience.list.items]]
+        details = "I built Java desk programs, Java web apps and REST web services."
+        [[params.experience.list.items]]
+        details = "I built a PHP Web Service that helps emergency services in the event that a chemical business explodes."
+        [[params.experience.list.items]]
+        details = "This application allowed the emergency services to see the emergency plan while they are on the way to the incident, in this way, the response time is faster than before."
+        [[params.experience.list.items]]
+        details = "Web Development – I built websites for various clients."
+        [[params.experience.list.items]]
+        details = "I was accountable for several interns."
+
+
+    [params.projects]
+        enable = false
+
+        [[params.projects.list]]
+        title = "Project Lorem Ipsum"
+        meta = "Open Source"
+        tagline = "You can use this section for your side projects. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+
+        [[params.projects.list]]
+        title = "Project Sed Fringilla"
+        meta = "Open Source"
+        tagline = "You can use this section for your side projects. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim."
+
+        [[params.projects.list]]
+        title = "Project Praesent"
+        meta = "Open Source"
+        tagline = "You can use this section for your side projects. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim."
+
+
+
+    [params.information]
+        enable = false
+
+        [[params.information.list]]
+        title = "Interests"
+        details = "Climbing, Snowboarding, Photography, Travelling, Rugby, Football, Tennis, Table Tennis and Surf."
+
+
+    [params.social]
+        enable = true
+
+        [[params.social.list]]
+        icon = "fab fa-github-square"
+        url = "//github.com/jorgeancal"
+        title = "Jorgeancal"
+        [[params.social.list]]
+        icon = "fab fa-linkedin"
+        url = "//linkedin.com/in/jorgeancal"
+        title = "Jorge Andreu Calatayud"
+        [[params.social.list]]
+        icon = "fab fa-twitter-square"
+        url = "//twitter.com/jorgeancal"
+        title = "@jorgeancal"
+
+    [params.footer]
+        copyright = "jorgeancal"
