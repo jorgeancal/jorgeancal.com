@@ -31,7 +31,7 @@ publishDir="docs"
         text = "contact@jorgeancal.com"
         [[params.contact.list]]
         icon = "fas fa-globe"
-        url = "#"
+        url = "www.jorgeancal.com"
         text = "www.jorgeancal.com"
 
     [params.skills]
