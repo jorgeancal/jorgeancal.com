@@ -1,12 +1,6 @@
-        <footer class="footer">
-          <div class="container">
-            <p class="copyright text-muted">{{ .Site.Params.copyright | default "&copy; All rights reserved. Powered by [Hugo](https://gohugo.io) and [Minimal](https://github.com/calintat/minimal)." | markdownify }}</p>
-          </div>
 
+        <footer class="footer text-center py-4">
+
+
+            <small class="copyright">{{ now.Year }} &copy; {{ with .Site.Params.footer.copyright }}{{ . | markdownify }}{{ else }}Ported to Hugo by <a href="https://github.com/cowboysmall" target="_blank">CowboySmall</a>{{ end }}</small>
         </footer>
-
-        {{ partial "body-close" . }}
-
-    </body>
-
-</html>
