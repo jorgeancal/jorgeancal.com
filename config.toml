@@ -2,7 +2,7 @@
 
 baseURL = "https://jorgeancal.com/"
 languageCode = "en"
-title = "Jorge Andreu Calatayud | CV"
+title = " My CV | Jorge Andreu Calatayud"
 theme = "hugo-devresume-theme"
 googleAnalytics = "UA-108421112-1"
 
@@ -14,12 +14,11 @@ googleAnalytics = "UA-108421112-1"
     primaryColor = "#2f5233"
     textPrimaryColor = "#292929"
 
-
     [params.profile]
         enable = true
         name = "Jorge Andreu"
-        tagline = "Senior Software Engineer"
-        avatar = "avatar.png"
+        tagline = "Site Reliability Engineer"
+        avatar = "jorge.png"
 
 
     [params.contact]
@@ -41,44 +40,43 @@ googleAnalytics = "UA-108421112-1"
         [[params.skills.list]]
         title = "Technical"
         [[params.skills.list.items]]
-        details = "JavaScript/Angular/React/Vue"
+        details = "JDK 1.8/JDK 9-15/Spring Boot"
         [[params.skills.list.items]]
-        details = "Python/Ruby/PHP"
+        details = "JavaScript/Angular 2/AngularJS/Ionic"
+        [[params.skills.list.items]]
+        details = "Python/PHP"
         [[params.skills.list.items]]
         details = "Node.js/ASP.NET"
         [[params.skills.list.items]]
-        details = "PostgreSQL/MySQL"
+        details = "Web Server (Apache2, Glassfish)"
         [[params.skills.list.items]]
         details = "Object-oriented design"
         [[params.skills.list.items]]
-        details = "Design and implement database structures"
+        details = "DB Server (MySQL, Oracle, SQL Server)"
         [[params.skills.list.items]]
-        details = "Lead and deliver complex software systems"
+        details = "HTML/CSS/Bootstrap"
+        [[params.skills.list.items]]
+        details = "Agile methodology/Scrum"
 
         [[params.skills.list]]
         title = "Professional"
-        [[params.skills.list.items]]
-        details = "Effective communication"
         [[params.skills.list.items]]
         details = "Team player"
         [[params.skills.list.items]]
         details = "Strong problem solver"
         [[params.skills.list.items]]
         details = "Good time management"
+        [[params.skills.list.items]]
+        details = "Effective communication"
 
 
     [params.education]
         enable = true
 
         [[params.education.list]]
-        degree = "MSc in Computer Science"
-        university = "University College London"
-        dates = "2010 - 2011"
-        [[params.education.list]]
-        degree = "BSc Maths and Physics"
-        university = "Imperial College London"
-        dates = "2007 - 2010"
-
+        degree = "B.Sc. in BUSINESS INFORMATION TECHNOLOGY"
+        university = "University of Wales"
+        dates = "2013 - June 2017"
 
 
     [params.awards]
@@ -110,69 +108,91 @@ googleAnalytics = "UA-108421112-1"
         enable = true
 
         [[params.interests.list]]
-        name = "Climbing"
-        [[params.interests.list]]
-        name = "Snowboarding"
-        [[params.interests.list]]
         name = "Photography"
         [[params.interests.list]]
+        name = "Basketball"
+        [[params.interests.list]]
         name = "Travelling"
+        [[params.interests.list]]
+        name = "Reading"
 
 
 
     [params.summary]
         enable = true
-        text = "My name is Jorge Andreu Calatayud and sorry for my English. I’m a developer. I studied a Bachelor of Science in Business Information Technology, with University of Wales. I worked as Java developer for 5 years in Zaragoza, Spain where I was born and currently I am working in E-Crunch Ltd."
+        text = "A highly motivated individual who is confident in leading, working with a team, learning quickly and adapting to any situation. A software developer with 7-8 years of experience who enjoys the energy and the intensity that is associated with the world of technology. Looking to find an opportunity within an organisation where I can develop my skills and career as a Senior Software Engineer."
 
 
     [params.experience]
         enable = true
 
         [[params.experience.list]]
-        title = "Senior Software Engineer"
-        dates = "2019 - Present"
-        company = "Google"
-        details = "Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec pede justo, fringilla vel. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis."
+        title = "Site Reliability Engineer"
+        dates = "2020 – Present"
+        company = "Crunch"
+        details = "Crunch is a medium-sized business that its main product is an accounting software. In this business I was given the opportunity to work as a SRE and I took it. The role says Site Reliability Engineer but I do devops and sysadmin work."
         [[params.experience.list.items]]
-        details = "Lorem ipsum dolor sit amet, consectetuer."
+        details = "I migrate the cluster from helm 2 to helm 3 without downtime"
         [[params.experience.list.items]]
-        details = "Aenean commodo ligula eget dolor."
+        details = "we were using Landscaper and we change it to helmfile"
         [[params.experience.list.items]]
-        details = "Etiam ultricies nisi vel augue."
+        details = "I'm working in implement Istio in our Clusters"
 
         [[params.experience.list]]
-        title = "Lead Software Developer"
-        dates = "2016 - 2019"
-        company = "Apple"
-        details = "Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec pede justo, fringilla vel."
+        title = " Java Developer"
+        dates = "2019 – 2020"
+        company = "Crunch"
+        details = "Crunch is a medium-sized business that its main product is an accounting software."
         [[params.experience.list.items]]
-        details = "Lorem ipsum dolor sit amet, consectetuer."
+        details = "We migrated the old security system to Java Services"
         [[params.experience.list.items]]
-        details = "Aenean commodo ligula eget dolor."
+        details = "We were using a Spinrg boot services in cluster but the Software System is based in docker"
+
 
         [[params.experience.list]]
-        title = "Senior Software Developer"
-        dates = "2014 - 2016"
-        company = "Dropbox"
-        details = "Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+        title = "Senior Java Developer"
+        dates = "2018-2019"
+        company = "Exis-TI (Indra)"
+        details = "I was hired by Exis-TI for working in Indra. Indra is a big business which has a lot of branches around the world."
+        [[params.experience.list.items]]
+        details = "I was working in a project for the Ministry of Agriculture of Cataluña. In this project, we’re using Spring, Oracle SQL, AngularJS. My role in this project is Full Stack. I have to say that there is a lot of work in the Backend and I’m doing some work in the front. The Java JDK that we are using is 1.8."
+
+        [[params.experience.list]]
+        title = "Senior Java Developer"
+        dates = "2017 - 2018"
+        company = "Hiberus Tecnologia"
+        details = "Hiberus Tecnologia is a big business which has various branches in Spain and one in the U.K. It works with a number of businesses in Spain and some of them are well-renowned like FOX, Simply, Vodafone, Movistar, Amadeus, Ibercaja, and many others."
+        [[params.experience.list.items]]
+        details = "I build Java web services, one application on Angularjs and one application on Ionic."
+        [[params.experience.list.items]]
+        details = "I was in a section of the company which is currently working for Travel-IMS, a branch of Amadeus which carries out work for many travel companies. At present, I am full stack and I am using EJB, JSF, Angular and Spring. But due to the large workload of the old application, since we are still selling both versions of the app, in the last month. I have been working more with JSF and EJB."
 
         [[params.experience.list]]
         title = "Senior Developer"
-        dates = "2013 - 2014"
-        company = "Uber"
-        details = "Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus."
-
+        dates = "2016-2017"
+        company = "CPS Ingenieros"
+        details = "CPS Ingenieros Obra Civil y Medio Ambiente S.L. is a medium-sized business which manages some branches of the General Direction of Traffic. The headquarters are situated in Valencia."
+        [[params.experience.list.items]]
+        details = "I built Java desk programs and Java web services. These projects are about roads and traffic-related matters."
+        [[params.experience.list.items]]
+        details = "I was in charge of a project which used spring web."
         [[params.experience.list]]
-        title = "Backend Developer"
-        dates = "2014 - 2016"
-        company = "Amazon"
+        title = "Junior Developer"
+        dates = "2012-2015"
+        company = "Soluciones Informáticas Netymedia"
         details = "Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-
-        [[params.experience.list]]
-        title = "Frontend Developer"
-        dates = "2013 - 2014"
-        company = "Startup"
-        details = "Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus."
+        [[params.experience.list.items]]
+        details = "Various projects and management of two servers: Linux Debian 8, Windows Server 2003."
+        [[params.experience.list.items]]
+        details = "I built Java desk programs, Java web apps and REST web services."
+        [[params.experience.list.items]]
+        details = "I built a PHP Web Service that helps emergency services in the event that a chemical business explodes."
+        [[params.experience.list.items]]
+        details = "This application allows the emergency services to see the emergency plan while they are on the way to the incident, in this way, the response time is faster than before."
+        [[params.experience.list.items]]
+        details = "Web Development – I built Websites for various clients."
+        [[params.experience.list.items]]
+        details = "More recently, accountable for several interns."
 
 
     [params.projects]
@@ -210,31 +230,21 @@ googleAnalytics = "UA-108421112-1"
         details = "Climbing, Snowboarding, Photography, Travelling"
 
 
-
-
-
-
-
-
     [params.social]
         enable = true
 
         [[params.social.list]]
         icon = "fab fa-github-square"
-        url = "//github.com/username"
-        title = "username"
+        url = "//github.com/jorgeancal"
+        title = "Jorgeancal"
         [[params.social.list]]
         icon = "fab fa-linkedin"
-        url = "//linkedin.com/in/username"
-        title = "username"
+        url = "//linkedin.com/in/jorgeancal"
+        title = "Jorge Andreu Calatayud"
         [[params.social.list]]
         icon = "fab fa-twitter-square"
-        url = "//twitter.com/username"
-        title = "@username"
+        url = "//twitter.com/jorgeancal"
+        title = "@jorgeancal"
 
     [params.footer]
         copyright = "jorgeancal"
-
-
-
-
