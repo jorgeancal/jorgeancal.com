@@ -5,7 +5,7 @@ languageCode = "en"
 title = " My CV | Jorge Andreu Calatayud"
 theme = "hugo-devresume-theme"
 googleAnalytics = "UA-108421112-1"
-
+publishDir="docs"
 
 [params]
     author = "Jorge Andreu Calatayud"
