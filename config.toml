@@ -83,13 +83,9 @@ googleAnalytics = "UA-108421112-1"
         enable = true
 
         [[params.awards.list]]
-        name = "Award Lorem Ipsum"
-        body = "Microsoft lorem ipsum"
-        date = "2019"
-        [[params.awards.list]]
-        name = "Award Donec Sodales"
-        body = "Oracle Aenean"
-        date = "2017"
+        name = "Winner of IV Teaching Innovation Day of San Jorge University"
+        body = "Certificate granted express recognition for the quality of pedagogical approach, its impact on student learning and its potential as an innovative practice in the classroom, to the best Practice (Non-University Education category): Road to the division."
+        date = "2014"
 
 
     [params.languages]
@@ -120,7 +116,7 @@ googleAnalytics = "UA-108421112-1"
 
     [params.summary]
         enable = true
-        text = "A highly motivated individual who is confident in leading, working with a team, learning quickly and adapting to any situation. A software developer with 7-8 years of experience who enjoys the energy and the intensity that is associated with the world of technology. Looking to find an opportunity within an organisation where I can develop my skills and career as a Senior Software Engineer."
+        text = "A highly motivated individual who is confident in leading, working with a team, learning quickly and adapting to any situation. A software developer with 9 years of experience who enjoys the energy and the intensity that is associated with the world of technology."
 
 
     [params.experience]
@@ -130,24 +126,23 @@ googleAnalytics = "UA-108421112-1"
         title = "Site Reliability Engineer"
         dates = "2020 – Present"
         company = "Crunch"
-        details = "Crunch is a medium-sized business that its main product is an accounting software. In this business I was given the opportunity to work as a SRE and I took it. The role says Site Reliability Engineer but I do devops and sysadmin work."
+        details = "Crunch is a medium-sized business whose main product is an accounting software. In this business I was given the opportunity to work as a Site Reliability Engineer and I took it. The role says Site Reliability Engineer but I also do devops and sysadmin work."
         [[params.experience.list.items]]
-        details = "I migrate the cluster from helm 2 to helm 3 without downtime"
+        details = "I have migrated the cluster from helm 2 to helm 3 without downtime"
         [[params.experience.list.items]]
-        details = "we were using Landscaper and we change it to helmfile"
+        details = "We were using Landscaper and we have changed it to helmfile"
         [[params.experience.list.items]]
-        details = "I'm working in implement Istio in our Clusters"
+        details = "I am working on implementing Istio in our Clusters"
 
         [[params.experience.list]]
         title = " Java Developer"
         dates = "2019 – 2020"
         company = "Crunch"
-        details = "Crunch is a medium-sized business that its main product is an accounting software."
+        details = "Crunch is a medium-sized business whose main product is an accounting software."
         [[params.experience.list.items]]
         details = "We migrated the old security system to Java Services"
         [[params.experience.list.items]]
-        details = "We were using a Spinrg boot services in cluster but the Software System is based in docker"
-
+        details = "We were using a Spring Boot services in cluster but the Software System is based in docker"
 
         [[params.experience.list]]
         title = "Senior Java Developer"
@@ -155,7 +150,7 @@ googleAnalytics = "UA-108421112-1"
         company = "Exis-TI (Indra)"
         details = "I was hired by Exis-TI for working in Indra. Indra is a big business which has a lot of branches around the world."
         [[params.experience.list.items]]
-        details = "I was working in a project for the Ministry of Agriculture of Cataluña. In this project, we’re using Spring, Oracle SQL, AngularJS. My role in this project is Full Stack. I have to say that there is a lot of work in the Backend and I’m doing some work in the front. The Java JDK that we are using is 1.8."
+        details = "I was working in a project for the Ministry of Agriculture of Cataluña. In this project, we were using Spring, Oracle SQL, AngularJS. My role in this project was Full Stack. I have to say that there was a lot of work in the Backend and I did some work in the front. The Java JDK that we were using was 1.8."
 
         [[params.experience.list]]
         title = "Senior Java Developer"
@@ -163,9 +158,9 @@ googleAnalytics = "UA-108421112-1"
         company = "Hiberus Tecnologia"
         details = "Hiberus Tecnologia is a big business which has various branches in Spain and one in the U.K. It works with a number of businesses in Spain and some of them are well-renowned like FOX, Simply, Vodafone, Movistar, Amadeus, Ibercaja, and many others."
         [[params.experience.list.items]]
-        details = "I build Java web services, one application on Angularjs and one application on Ionic."
+        details = "I built Java web services, one application on Angularjs and one application on Ionic."
         [[params.experience.list.items]]
-        details = "I was in a section of the company which is currently working for Travel-IMS, a branch of Amadeus which carries out work for many travel companies. At present, I am full stack and I am using EJB, JSF, Angular and Spring. But due to the large workload of the old application, since we are still selling both versions of the app, in the last month. I have been working more with JSF and EJB."
+        details = "I was in a section of the company which was working for Travel-IMS, a branch of Amadeus which carries out work for many travel companies. I was full stack and I used EJB, JSF, Angular and Spring. But due to the large workload of the old application, since we were still selling both versions of the app. I worked more with JSF and EJB."
 
         [[params.experience.list]]
         title = "Senior Developer"
@@ -173,14 +168,14 @@ googleAnalytics = "UA-108421112-1"
         company = "CPS Ingenieros"
         details = "CPS Ingenieros Obra Civil y Medio Ambiente S.L. is a medium-sized business which manages some branches of the General Direction of Traffic. The headquarters are situated in Valencia."
         [[params.experience.list.items]]
-        details = "I built Java desk programs and Java web services. These projects are about roads and traffic-related matters."
+        details = "I built Java desk programs and Java web services. These projects were about roads and traffic-related matters."
         [[params.experience.list.items]]
         details = "I was in charge of a project which used spring web."
         [[params.experience.list]]
         title = "Junior Developer"
         dates = "2012-2015"
         company = "Soluciones Informáticas Netymedia"
-        details = "Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+        details = "Netymedia is a small business that develops websites and custom applications."
         [[params.experience.list.items]]
         details = "Various projects and management of two servers: Linux Debian 8, Windows Server 2003."
         [[params.experience.list.items]]
@@ -188,15 +183,15 @@ googleAnalytics = "UA-108421112-1"
         [[params.experience.list.items]]
         details = "I built a PHP Web Service that helps emergency services in the event that a chemical business explodes."
         [[params.experience.list.items]]
-        details = "This application allows the emergency services to see the emergency plan while they are on the way to the incident, in this way, the response time is faster than before."
+        details = "This application allowed the emergency services to see the emergency plan while they are on the way to the incident, in this way, the response time is faster than before."
         [[params.experience.list.items]]
-        details = "Web Development – I built Websites for various clients."
+        details = "Web Development – I built websites for various clients."
         [[params.experience.list.items]]
-        details = "More recently, accountable for several interns."
+        details = "I was accountable for several interns."
 
 
     [params.projects]
-        enable = true
+        enable = false
 
         [[params.projects.list]]
         title = "Project Lorem Ipsum"
@@ -216,18 +211,11 @@ googleAnalytics = "UA-108421112-1"
 
 
     [params.information]
-        enable = true
-
-        [[params.information.list]]
-        title = "Papers"
-        [[params.information.list.items]]
-        details = "2018 · Lorem Ipsum"
-        [[params.information.list.items]]
-        details = "2016 · Sed Fringilla"
+        enable = false
 
         [[params.information.list]]
         title = "Interests"
-        details = "Climbing, Snowboarding, Photography, Travelling"
+        details = "Climbing, Snowboarding, Photography, Travelling, Rugby, Football, Tennis, Table Tennis and Surf."
 
 
     [params.social]
