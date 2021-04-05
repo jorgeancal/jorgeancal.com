@@ -40,24 +40,33 @@ publishDir="docs"
         [[params.skills.list]]
         title = "Technical"
         [[params.skills.list.items]]
-        details = "JDK 1.8/JDK 9-15/Spring Boot"
+        details = "Linux"
         [[params.skills.list.items]]
-        details = "JavaScript/Angular 2/AngularJS/Ionic"
+        details = "JDK 1.8/JDK 9-16/Spring Boot"
+        [[params.skills.list.items]]
+        details = "goLang, Python"
+        [[params.skills.list.items]]
+        details = "Docker, k8s, helm, Istio"
+        [[params.skills.list.items]]
+        details = "Ansible"
+        [[params.skills.list.items]]
+        details = "Nginx, Apache, Glassfish"
+        [[params.skills.list.items]]
+        details = "DB Server (MySQL, Oracle, SQL Server, Postgress)"
         [[params.skills.list.items]]
         details = "Python/PHP"
         [[params.skills.list.items]]
-        details = "Node.js/ASP.NET"
-        [[params.skills.list.items]]
-        details = "Web Server (Apache2, Glassfish)"
-        [[params.skills.list.items]]
-        details = "Object-oriented design"
-        [[params.skills.list.items]]
-        details = "DB Server (MySQL, Oracle, SQL Server)"
+        details = "Node.js"
         [[params.skills.list.items]]
         details = "HTML/CSS/Bootstrap"
         [[params.skills.list.items]]
         details = "Agile methodology/Scrum"
-
+        [[params.skills.list.items]]
+        details = "GoCd"
+        [[params.skills.list.items]]
+        details = "Object-oriented design"
+        [[params.skills.list.items]]
+        details = "JavaScript/Angular 2/AngularJS/Ionic"
         [[params.skills.list]]
         title = "Professional"
         [[params.skills.list.items]]
@@ -191,22 +200,13 @@ publishDir="docs"
 
 
     [params.projects]
-        enable = false
+        enable = true
 
         [[params.projects.list]]
-        title = "Project Lorem Ipsum"
-        meta = "Open Source"
-        tagline = "You can use this section for your side projects. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-
-        [[params.projects.list]]
-        title = "Project Sed Fringilla"
-        meta = "Open Source"
-        tagline = "You can use this section for your side projects. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim."
-
-        [[params.projects.list]]
-        title = "Project Praesent"
-        meta = "Open Source"
-        tagline = "You can use this section for your side projects. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim."
+        title = "DevBasis"
+        meta = "Blog"
+        url = "https://devbasis.me"
+        tagline = "I'll post about my knowledge and some things that I discover while I’m working. I won’t post everyday because that’s impossible. I’ll try to post once per week or at least once per month."
 
 
 
