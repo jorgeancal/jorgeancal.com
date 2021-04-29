@@ -42,9 +42,9 @@ publishDir="docs"
         [[params.skills.list.items]]
         details = "Linux"
         [[params.skills.list.items]]
-        details = "JDK 1.8/JDK 9-16/Spring Boot"
+        details = "Java/Spring Boot"
         [[params.skills.list.items]]
-        details = "goLang, Python"
+        details = "GO, Python"
         [[params.skills.list.items]]
         details = "Docker, k8s, helm, Istio"
         [[params.skills.list.items]]
@@ -203,9 +203,9 @@ publishDir="docs"
         enable = true
 
         [[params.projects.list]]
-        title = "DevBasis"
+        title = "Jorge's Notebook"
         meta = "Blog"
-        url = "https://devbasis.me"
+        url = "https://jorgesnotebook.com"
         tagline = "I'll post about my knowledge and some things that I discover while I’m working. I won’t post everyday because that’s impossible. I’ll try to post once per week or at least once per month."
 
 
