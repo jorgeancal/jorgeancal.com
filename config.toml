@@ -125,7 +125,7 @@ publishDir="docs"
 
     [params.summary]
         enable = true
-        text = "A highly motivated individual who is confident in leading, working with a team, learning quickly and adapting to any situation. A software developer with 9 years of experience who enjoys the energy and the intensity that is associated with the world of technology."
+        text = "A highly motivated individual who is confident in leading, working with a team, learning quickly and adapting to any situation. A software developer with 11 years of experience who enjoys the energy and the intensity that is associated with the world of technology."
 
 
     [params.experience]
