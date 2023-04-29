@@ -23,7 +23,7 @@ publishDir="docs"
 
     [params.contact]
         enable = true
-        location = "Brighton, UK"
+        location = "Shropshire, UK"
 
         [[params.contact.list]]
         icon = "fas fa-envelope-square"
@@ -48,11 +48,11 @@ publishDir="docs"
         [[params.skills.list.items]]
         details = "Docker, k8s, helm, Istio"
         [[params.skills.list.items]]
-        details = "Ansible"
+        details = "Terraform, Ansible"
         [[params.skills.list.items]]
-        details = "Nginx, Apache, Glassfish"
+        details = "Traefik, Nginx, Apache, Glassfish"
         [[params.skills.list.items]]
-        details = "DB Server (MySQL, Oracle, SQL Server, Postgress)"
+        details = "DB Server (MySQL, Postgress, Oracle, SQL Server)"
         [[params.skills.list.items]]
         details = "Python/PHP"
         [[params.skills.list.items]]
@@ -133,7 +133,23 @@ publishDir="docs"
 
         [[params.experience.list]]
         title = "Site Reliability Engineer"
-        dates = "2020 – Present"
+        dates = "Jan 2022 – Present"
+        company = "Matillion"
+        details = "Matillion is data transformation for cloud data warehouses"
+        [[params.experience.list.items]]
+        details = "Migrate all our service to opentelemetry"
+        [[params.experience.list.items]]
+        details = "Implementing our own Observability Platform, we've chosen Grafana, Loki, Tempo and Mimir"
+
+        [[params.experience.list]]
+        title = "Senior Site Reliability Engineer"
+        dates = "June 2021 – Dec 2021"
+        company = "Crunch"
+        details = "Crunch is a medium-sized business whose main product is an accounting software. In this business I was given the opportunity to work as a Site Reliability Engineer and I took it. The role says Site Reliability Engineer but I also do devops and sysadmin work."
+
+        [[params.experience.list]]
+        title = "Site Reliability Engineer"
+        dates = "2020 – 2021"
         company = "Crunch"
         details = "Crunch is a medium-sized business whose main product is an accounting software. In this business I was given the opportunity to work as a Site Reliability Engineer and I took it. The role says Site Reliability Engineer but I also do devops and sysadmin work."
         [[params.experience.list.items]]
