@@ -4,7 +4,8 @@
     <title>Categories on  My CV | Jorge Andreu Calatayud</title>
     <link>https://jorgeancal.com/categories/</link>
     <description>Recent content in Categories on  My CV | Jorge Andreu Calatayud</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://jorgeancal.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://jorgeancal.com/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

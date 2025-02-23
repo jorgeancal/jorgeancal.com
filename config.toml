@@ -4,7 +4,7 @@ baseURL = "https://jorgeancal.com/"
 languageCode = "en"
 title = " My CV | Jorge Andreu Calatayud"
 theme = "hugo-devresume-theme"
-googleAnalytics = "UA-108421112-1"
+googleAnalytics = "G-1E8H3S9CNM"
 publishDir="docs"
 
 [params]
@@ -132,10 +132,24 @@ publishDir="docs"
         enable = true
 
         [[params.experience.list]]
-        title = "Site Reliability Engineer"
-        dates = "Jan 2022 – Present"
+        title = "Senior Site Reliability Engineer"
+        dates = "Feb 2024 – Present"
         company = "Matillion"
-        details = "Matillion is data transformation for cloud data warehouses"
+        details = "Matillion is a cloud-based data integration and transformation platform. It streamlines ETL/ELT processes for modern cloud data warehouses like Snowflake, Redshift, and BigQuery. Its intuitive interface enables users to easily prepare, transform, and load data. Businesses leverage Matillion to enhance analytics and drive better decision-making."
+        [[params.experience.list.items]]
+        details = "Implementing LGTM grafana Stack"
+        [[params.experience.list.items]]
+        details = "Improve the way we upgrade our Kubernetes clusters to ensure a smooth process with no downtime for the services running on our SaaS platform."
+        [[params.experience.list.items]]
+        details = "Mantaining Matillion EKS set up. Cilium, Linkerd, etc"
+        [[params.experience.list.items]]
+        details = "Mantaining Kafka"
+
+        [[params.experience.list]]
+        title = "Site Reliability Engineer"
+        dates = "Jan 2022 – Jan 2024"
+        company = "Matillion"
+        details = "Matillion is a cloud-based data integration and transformation platform. It streamlines ETL/ELT processes for modern cloud data warehouses like Snowflake, Redshift, and BigQuery. Its intuitive interface enables users to easily prepare, transform, and load data. Businesses leverage Matillion to enhance analytics and drive better decision-making."
         [[params.experience.list.items]]
         details = "Migrate all our service to opentelemetry"
         [[params.experience.list.items]]
