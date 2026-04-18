@@ -8,7 +8,7 @@
                         {{ if $img }}
                         {{ $img = $img.Resize "120x120 webp q85" }}
                         <div class="resume-profile-avatar mb-3 mb-md-0 mr-md-5 ml-md-0 mx-auto">
-                            <img src="{{ $img.Permalink }}" alt="{{ .Site.Params.profile.name }}" width="120" height="120">
+                            <img src="{{ $img.RelPermalink }}" alt="{{ .Site.Params.profile.name }}" width="120" height="120">
                         </div>
                         {{ end }}
                         {{ end }}
