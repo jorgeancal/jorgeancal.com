@@ -44,6 +44,11 @@ $theme-colors: (
 /*************************** DevResume Styles ****************************/
 
 /*********** Theme Generic **********/
+::selection {
+    background-color: rgba($theme-color-primary, 0.4);
+    color: $theme-text-color-primary;
+}
+
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
