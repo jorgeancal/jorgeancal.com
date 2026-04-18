@@ -17,7 +17,7 @@ publishDir="docs"
     [params.profile]
         enable = true
         name = "Jorge Andreu"
-        tagline = "Site Reliability Engineer"
+        tagline = "Staff Site Reliability Engineer"
         avatar = "jorge.png"
 
 
@@ -42,31 +42,29 @@ publishDir="docs"
         [[params.skills.list.items]]
         details = "Linux"
         [[params.skills.list.items]]
-        details = "Java/Spring Boot"
+        details = "Go, Python, Java/Spring Boot"
         [[params.skills.list.items]]
-        details = "GO, Python"
+        details = "Kubernetes, Helm, Helmfile"
         [[params.skills.list.items]]
-        details = "Docker, k8s, helm, Istio"
+        details = "Amazon Web Services (AWS), Amazon EKS, Amazon RDS, Amazon ECS"
         [[params.skills.list.items]]
         details = "Terraform, Ansible"
         [[params.skills.list.items]]
-        details = "Traefik, Nginx, Apache, Glassfish"
+        details = "Cilium, Linkerd, Istio"
         [[params.skills.list.items]]
-        details = "DB Server (MySQL, Postgress, Oracle, SQL Server)"
+        details = "Grafana, Loki, Mimir, Tempo, Prometheus"
         [[params.skills.list.items]]
-        details = "Python/PHP"
+        details = "OpenTelemetry, Datadog, Zipkin, Thanos, Logz.io"
         [[params.skills.list.items]]
-        details = "Node.js"
+        details = "Argo, Kafka"
         [[params.skills.list.items]]
-        details = "HTML/CSS/Bootstrap"
+        details = "Docker, Traefik, Nginx"
+        [[params.skills.list.items]]
+        details = "DB Server (MySQL, PostgreSQL, Oracle, SQL Server)"
+        [[params.skills.list.items]]
+        details = "JavaScript, AngularJS, HTML/CSS/Bootstrap"
         [[params.skills.list.items]]
         details = "Agile methodology/Scrum"
-        [[params.skills.list.items]]
-        details = "GoCd"
-        [[params.skills.list.items]]
-        details = "Object-oriented design"
-        [[params.skills.list.items]]
-        details = "JavaScript/Angular 2/AngularJS/Ionic"
         [[params.skills.list]]
         title = "Professional"
         [[params.skills.list.items]]
@@ -125,29 +123,41 @@ publishDir="docs"
 
     [params.summary]
         enable = true
-        text = "A highly motivated individual who is confident in leading, working with a team, learning quickly and adapting to any situation. A software developer with 11 years of experience who enjoys the energy and the intensity that is associated with the world of technology."
+        text = "A highly motivated individual who is confident in leading, working with a team, learning quickly and adapting to any situation. A Staff Site Reliability Engineer with 13 years of experience who enjoys the energy and the intensity that is associated with the world of technology."
 
 
     [params.experience]
         enable = true
 
         [[params.experience.list]]
+        title = "Staff Site Reliability Engineer"
+        dates = "May 2025 – Present"
+        company = "Matillion"
+        details = "Matillion is a cloud-based data integration and transformation platform. It streamlines ETL/ELT processes for modern cloud data warehouses like Snowflake, Redshift, and BigQuery."
+        [[params.experience.list.items]]
+        details = "Leading SRE practices across the platform with a focus on reliability, scalability and automation."
+        [[params.experience.list.items]]
+        details = "Maintaining and evolving the Kubernetes (EKS) platform with Cilium and Linkerd service mesh."
+        [[params.experience.list.items]]
+        details = "Contributing to Maia AI (maia.ai), Matillion's AI-powered data assistant, ensuring platform reliability and scalability for AI-driven workloads."
+
+        [[params.experience.list]]
         title = "Senior Site Reliability Engineer"
-        dates = "Feb 2024 – Present"
+        dates = "Feb 2024 – May 2025"
         company = "Matillion"
         details = "Matillion is a cloud-based data integration and transformation platform. It streamlines ETL/ELT processes for modern cloud data warehouses like Snowflake, Redshift, and BigQuery. Its intuitive interface enables users to easily prepare, transform, and load data. Businesses leverage Matillion to enhance analytics and drive better decision-making."
         [[params.experience.list.items]]
-        details = "Implementing LGTM grafana Stack"
+        details = "Implementing LGTM Grafana Stack"
         [[params.experience.list.items]]
-        details = "Improve the way we upgrade our Kubernetes clusters to ensure a smooth process with no downtime for the services running on our SaaS platform."
+        details = "Improved the Kubernetes cluster upgrade process to ensure smooth, zero-downtime upgrades for the SaaS platform."
         [[params.experience.list.items]]
-        details = "Mantaining Matillion EKS set up. Cilium, Linkerd, etc"
+        details = "Maintaining Matillion EKS setup including Cilium, Linkerd and AWS RDS/ECS integrations."
         [[params.experience.list.items]]
-        details = "Mantaining Kafka"
+        details = "Maintaining Kafka"
 
         [[params.experience.list]]
         title = "Site Reliability Engineer"
-        dates = "Jan 2022 – Jan 2024"
+        dates = "Jan 2022 – Feb 2024"
         company = "Matillion"
         details = "Matillion is a cloud-based data integration and transformation platform. It streamlines ETL/ELT processes for modern cloud data warehouses like Snowflake, Redshift, and BigQuery. Its intuitive interface enables users to easily prepare, transform, and load data. Businesses leverage Matillion to enhance analytics and drive better decision-making."
         [[params.experience.list.items]]
@@ -163,7 +173,7 @@ publishDir="docs"
 
         [[params.experience.list]]
         title = "Site Reliability Engineer"
-        dates = "2020 – 2021"
+        dates = "Mar 2020 – May 2021"
         company = "Crunch"
         details = "Crunch is a medium-sized business whose main product is an accounting software. In this business I was given the opportunity to work as a Site Reliability Engineer and I took it. The role says Site Reliability Engineer but I also do devops and sysadmin work."
         [[params.experience.list.items]]
@@ -174,8 +184,8 @@ publishDir="docs"
         details = "I am working on implementing Istio in our Clusters"
 
         [[params.experience.list]]
-        title = " Java Developer"
-        dates = "2019 – 2020"
+        title = "Java Developer"
+        dates = "May 2019 – Mar 2020"
         company = "Crunch"
         details = "Crunch is a medium-sized business whose main product is an accounting software."
         [[params.experience.list.items]]
@@ -185,7 +195,7 @@ publishDir="docs"
 
         [[params.experience.list]]
         title = "Senior Java Developer"
-        dates = "2018-2019"
+        dates = "Oct 2018 – Mar 2019"
         company = "Exis-TI (Indra)"
         details = "I was hired by Exis-TI for working in Indra. Indra is a big business which has a lot of branches around the world."
         [[params.experience.list.items]]
@@ -193,7 +203,7 @@ publishDir="docs"
 
         [[params.experience.list]]
         title = "Senior Java Developer"
-        dates = "2017 - 2018"
+        dates = "Jul 2017 – Oct 2018"
         company = "Hiberus Tecnologia"
         details = "Hiberus Tecnologia is a big business which has various branches in Spain and one in the U.K. It works with a number of businesses in Spain and some of them are well-renowned like FOX, Simply, Vodafone, Movistar, Amadeus, Ibercaja, and many others."
         [[params.experience.list.items]]
@@ -202,8 +212,8 @@ publishDir="docs"
         details = "I was in a section of the company which was working for Travel-IMS, a branch of Amadeus which carries out work for many travel companies. I was full stack and I used EJB, JSF, Angular and Spring. But due to the large workload of the old application, since we were still selling both versions of the app. I worked more with JSF and EJB."
 
         [[params.experience.list]]
-        title = "Senior Developer"
-        dates = "2016-2017"
+        title = "Java Developer"
+        dates = "Nov 2016 – Jul 2017"
         company = "CPS Ingenieros"
         details = "CPS Ingenieros Obra Civil y Medio Ambiente S.L. is a medium-sized business which manages some branches of the General Direction of Traffic. The headquarters are situated in Valencia."
         [[params.experience.list.items]]

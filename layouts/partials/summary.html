@@ -4,7 +4,13 @@
                     <div class="media flex-column flex-md-row align-items-center">
 
                         {{ if .Site.Params.profile.avatar }}
-                        <img class="resume-profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded mx-auto" src="{{ .Site.BaseURL }}/images/{{ .Site.Params.profile.avatar }}" alt="image">
+                        {{ $img := resources.Get (printf "images/%s" .Site.Params.profile.avatar) }}
+                        {{ if $img }}
+                        {{ $img = $img.Resize "120x120 webp q85" }}
+                        <div class="resume-profile-avatar mb-3 mb-md-0 mr-md-5 ml-md-0 mx-auto">
+                            <img src="{{ $img.Permalink }}" alt="{{ .Site.Params.profile.name }}" width="120" height="120">
+                        </div>
+                        {{ end }}
                         {{ end }}
 
                         <div class="media-body text-left">
