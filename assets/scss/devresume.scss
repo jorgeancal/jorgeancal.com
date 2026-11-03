@@ -9,9 +9,11 @@
 /*************************** Theme Colours****************************/
 $theme-color-primary: #7C3AED;
 $theme-color-primary-hover: #8B5CF6;
+$theme-color-text-accent: #A78BFA;   // 6.9:1 on the card background; the primary is for non-text use only
+$theme-color-text-accent-hover: #C4B5FD;
 $theme-text-color-primary: #E5E7EB;
 $theme-text-color-secondary: #9CA3AF;
-$theme-text-color-light: #6B7280;
+$theme-text-color-light: #8B93A1;
 $theme-border-color: #1F1F2A;
 
 $bg-base:    #0A0A0F;
@@ -24,13 +26,16 @@ $gray-200: #1A1A24;
 $gray-300: #1F1F2A;
 $gray-400: #2A2A38;
 $gray-500: #3D3D52;
-$gray-600: #6B7280;
+$gray-600: #8B93A1;
 $gray-700: #9CA3AF;
 $gray-800: #D1D5DB;
 $gray-900: #F9FAFB;
 
 $body-bg:    $bg-base;
 $body-color: $theme-text-color-secondary;
+
+$link-color: $theme-color-text-accent;
+$link-hover-color: $theme-color-text-accent-hover;
 
 $theme-colors: (
   "primary":   $theme-color-primary,
@@ -133,7 +138,7 @@ a.theme-link {
     padding-left: 1rem;
     font-size: 1.125rem;
     letter-spacing: 0.15rem;
-    color: $theme-color-primary;
+    color: $theme-color-text-accent;
     &:before {
         content: "";
         display: inline-block;
@@ -150,7 +155,7 @@ a.theme-link {
     font-size: 2.75rem;
     font-weight: 700;
     letter-spacing: 0.2rem;
-    color: $theme-color-primary;
+    color: $theme-color-text-accent;
 }
 
 .resume-tagline {
@@ -168,7 +173,7 @@ a.theme-link {
 a.resume-link {
     color: $theme-text-color-secondary;
     &:hover {
-        color: $theme-color-primary;
+        color: $theme-color-text-accent-hover;
     }
 }
 
@@ -244,8 +249,16 @@ a.resume-link {
     color: $theme-text-color-secondary;
 }
 
-.fa-heart {
-    color: #fb866a;
+.icon {
+    width: 1.25em;
+    height: 1.25em;
+    vertical-align: -0.25em;
+    flex-shrink: 0;
+}
+
+.icon-lg {
+    width: 2em;
+    height: 2em;
 }
 
 // Medium devices (tablets, less than 992px)
