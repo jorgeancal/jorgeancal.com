@@ -111,7 +111,10 @@ section h3{font-size:1rem}
 /* Print: used for the CV and for the PDF export */
 @page{size:A4;margin:14mm}
 @media print{
-  html{font-size:10.5pt}
+  html{font-size:10pt}
+  .avatar{display:none}
+  .cv-header{padding:0 0 .5rem}
+  .intro h2{margin-bottom:.25rem}
   body{background:#fff;color:#111}
   .skip-link,.site-header,.site-footer,.consent,.cv-actions{display:none!important}
   h1,h2,h3,h4,.tagline,.brand{color:#000}
@@ -120,9 +123,10 @@ section h3{font-size:1rem}
   .meta,.employer-desc{color:#444}
   :root{color-scheme:light}
   html{background:#fff}
-  .role,.cv-columns>section>*{break-inside:avoid}
-  h2,h3,h4{break-after:avoid}
-  section{border-color:#ccc;padding:.75rem 0}
+  .role,.project,.cv-side section>*{break-inside:avoid}
+  h2,h3,h4,.employer-heading,.employer-desc,.role-heading{break-after:avoid}
+  section{border-color:#ccc;padding:.6rem 0}
+  .cv-body{border-color:#ccc}
   .container{max-width:none;padding:0}
   .has-progression::before{background:#ccc}
   .has-progression .role::before{background:#fff;border-color:#666}
