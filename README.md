@@ -1,58 +1,76 @@
 # jorgeancal.com
 
-Personal CV site for Jorge Andreu Calatayud, built with [Hugo](https://gohugo.io/)
-and the `hugo-devresume-theme` (git submodule). Published from `docs/` with the
-custom domain in `docs/CNAME`.
+Personal site and CV for Jorge Andreu Calatayud, built with
+[Hugo](https://gohugo.io/) (extended). There is no theme and no JavaScript
+framework: the templates in `layouts/` and one small stylesheet make up the
+whole site. It is published from `docs/` with the custom domain in `CNAME`.
 
 ## Requirements
 
 - Hugo extended (developed against 0.169.0)
-- Git, with submodules initialised: `git submodule update --init`
+- Chromium, only to regenerate the PDF CV
 
-## Develop
+## Commands
 
-    hugo server
+    make serve    # hugo server
+    make build    # production build into docs/, removing stale files
+    make pdf      # regenerate static/jorge-andreu-calatayud-cv.pdf
 
-## Build and publish
+`make build` uses `--cleanDestinationDir`, so files that are no longer
+generated are removed from `docs/`. The custom-domain `CNAME` survives because
+it is also kept in `static/`.
 
-    hugo                # writes the site to docs/
-    git add docs && git commit
+After changing the CV, run `make pdf` first and then `make build`, so the new
+PDF is published with the site.
 
-The repository is published from `docs/`, so build and commit it with the
-source change. `docs/assets/css/` accumulates one fingerprinted file per build;
-only the one referenced from `docs/index.html` is needed.
+## Pages
+
+| URL | Source |
+| --- | --- |
+| `/` | `layouts/index.html` |
+| `/cv/` | `content/cv.md` with `layouts/_default/cv.html`; print styles also drive the PDF |
+| `/privacy/` | `content/privacy.md` |
 
 ## Where things live
 
 | What | Where |
 | --- | --- |
-| CV content (summary, roles, skills, education, links) | `config.toml` under `[params]` |
-| Experience data | `params.experience.list`: one entry per employer, with its `roles` |
-| Site/SEO values (description, job title, keywords, share image) | `config.toml`, top-level `[params]` |
-| Templates overriding the theme | `layouts/` |
-| Styles | `assets/scss/devresume.scss` (Bootstrap is imported from the theme) |
-| Icons (inline SVG) | `assets/icons/`, used through `layouts/partials/icon.html` |
-| Self-hosted fonts (Roboto, SIL OFL) | `static/fonts/` |
+| All CV and homepage content | `config.toml` under `[params]` |
+| Employers and roles | `params.experience.list`: one entry per employer, with its `roles` |
+| Specialisms, selected work, projects | `params.specialisms`, `params.selectedWork`, `params.projects` |
+| SEO values (description, job title, keywords, share image) | `config.toml`, top-level `[params]` |
+| Templates | `layouts/` (`_default/baseof.html` wraps every page) |
+| Styles | `assets/css/site.css`, inlined into each page at build time |
+| Icons (inline SVG, Font Awesome Free, CC BY 4.0) | `assets/icons/`, used through `layouts/partials/icon.html` |
+| Self-hosted fonts (Roboto, SIL OFL 1.1) | `static/fonts/` |
 | Share image, favicons | `static/images/`, `static/favicon.ico` |
 
-Do not edit files inside `themes/`; override them under `layouts/` instead.
+Employer descriptions and role bullets are written once and used for both the
+homepage career section and the CV, so there is a single source for each fact.
 
 ### Adding a role
 
-Add it at the top of the employer's `roles` list. Give the previous role an end
-date instead of "Present". The employer's date range is derived from its oldest
-and newest role, and the purple dot follows whichever role ends in "Present".
+Add it at the top of the employer's `roles` list, and give the previous role an
+end date instead of "Present". The employer's date range is derived from its
+oldest and newest role, and the purple dot follows the role whose dates end in
+"Present".
+
+## Analytics and consent
+
+Google Analytics (the ID is in `[services.googleAnalytics]`) is not loaded
+until a visitor accepts it in the banner from
+`layouts/partials/consent.html`. The choice is kept in `localStorage`, can be
+changed from the footer, and declining removes the `_ga` cookies. Without
+JavaScript nothing is loaded and the banner is not shown.
 
 ## Checking a build
 
-Build with the local address as the base URL, so the absolute asset URLs
-point at your copy rather than the live site, then audit it with Lighthouse
-in Chrome DevTools or the Lighthouse CLI:
+Build with the local address as the base URL, so absolute asset URLs point at
+your copy rather than the live site, then audit it with Lighthouse or axe:
 
     hugo --baseURL http://localhost:1313/ -d /tmp/site
-    hugo server --baseURL http://localhost:1313/ --disableFastRender
 
 ## Commits
 
-Conventional Commits (`feat:`, `fix:`, `perf:`, `docs:`, `chore:`), subject
-line of 72 characters or fewer.
+Conventional Commits (`feat:`, `fix:`, `perf:`, `docs:`, `chore:`, `build:`),
+subject line of 72 characters or fewer.
