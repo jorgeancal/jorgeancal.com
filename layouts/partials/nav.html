@@ -1,6 +1,6 @@
     <header class="site-header">
         <nav class="container" aria-label="Primary">
-            <a class="brand" href="{{ "/" | relURL }}">{{ site.Params.profile.name }}</a>
+            {{- if not .IsHome }}<a class="brand" href="{{ "/" | relURL }}">{{ site.Params.profile.fullName }}</a>{{ end }}
             <ul>
                 <li><a href="{{ "/#experience" | relURL }}">Experience</a></li>
                 <li><a href="{{ "/#projects" | relURL }}">Projects</a></li>
