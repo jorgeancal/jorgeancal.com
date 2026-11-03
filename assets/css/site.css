@@ -109,9 +109,16 @@ section h3{font-size:1rem}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 /* Print: used for the CV and for the PDF export */
-@page{size:A4;margin:14mm}
+@page{size:A4;margin:10mm 12mm}
 @media print{
-  html{font-size:10pt}
+  html{font-size:9pt}
+  body{line-height:1.4}
+  .role ul{margin-top:.2rem}
+  .role{padding-bottom:.4rem}
+  .employer{margin-bottom:1rem}
+  .employer+.employer{padding-top:.75rem}
+  .employer-desc{margin-bottom:.5rem}
+  .cv-body{gap:0 2rem}
   .avatar{display:none}
   .cv-header{padding:0 0 .5rem}
   .intro h2{margin-bottom:.25rem}
