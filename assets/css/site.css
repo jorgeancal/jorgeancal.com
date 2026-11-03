@@ -32,8 +32,8 @@ a:hover{color:var(--accent-hover)}
 .brand{color:var(--text);font-weight:700;text-decoration:none;letter-spacing:.05em}
 
 /* Hero */
-.cv-header h1{font-size:clamp(2rem,6.5vw,3.5rem);letter-spacing:.06em;text-transform:uppercase;line-height:1.1}
-.tagline{color:var(--accent);font-size:1rem;letter-spacing:.04em;margin:.75rem 0 1.25rem}
+.cv-header h1{color:var(--mark);font-size:clamp(1.75rem,5.5vw,2.375rem);font-weight:700;letter-spacing:.1em;text-transform:uppercase;line-height:1.15}
+.tagline{color:var(--body);font-size:1.25rem;margin:.5rem 0 1.25rem}
 .cv-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.25rem 0 0}
 .btn{display:inline-block;border:1px solid var(--border);border-radius:.25rem;color:var(--text);font-weight:700;padding:.5rem 1rem;text-decoration:none;background:transparent;font-family:inherit;font-size:1rem;cursor:pointer}
 .btn:hover{border-color:var(--accent);color:var(--text)}
@@ -42,7 +42,7 @@ a:hover{color:var(--accent-hover)}
 
 /* Sections */
 section{padding:2rem 0;border-top:1px solid var(--border)}
-section>h2{color:var(--accent);font-size:1rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.25rem}
+section>h2{border-left:5px solid var(--mark);color:var(--mark);font-size:1.2rem;letter-spacing:.15rem;line-height:1.2;padding-left:1rem;text-transform:uppercase;margin-bottom:1.5rem}
 section h3{font-size:1rem}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1rem}
 .cards article{background:var(--panel);border:1px solid var(--border);border-radius:.375rem;padding:1rem 1.25rem}
@@ -58,7 +58,7 @@ section h3{font-size:1rem}
 .roles{list-style:none;margin-top:.75rem}
 .role{position:relative;padding-bottom:.75rem}
 .role-heading h4{font-size:.9375rem}
-.role ul{margin:.375rem 0 0 1.1rem;font-size:.9375rem}
+.role ul{margin:.375rem 0 0 1.1rem;font-size:.875rem}
 .role li{margin-bottom:.25rem}
 .has-progression{padding-left:1.25rem;position:relative}
 .has-progression::before{content:"";position:absolute;left:.3rem;top:.7rem;bottom:.9rem;width:2px;background:var(--border)}
@@ -78,13 +78,17 @@ section h3{font-size:1rem}
 .cv-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:0 2rem}
 .cv-columns h3,.cv section h3{margin-top:.75rem}
 .container.wide{max-width:68rem}
-.cv-header{padding:2.5rem 0 1.5rem}
+.cv-header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:1.25rem 2rem;padding:0 0 1.5rem}
+.contact{display:grid;grid-template-columns:repeat(2,auto);gap:.25rem 1.25rem;border-left:1px solid var(--border);padding-left:1.25rem;font-size:.8125rem;margin-left:auto}
+.contact li{margin:0}
 .intro{display:flex;gap:2rem;align-items:center}
 .intro h2{margin-bottom:.75rem}
-.avatar{border-radius:50%;flex:none;width:120px;height:120px;object-fit:cover;background:#2a2a38}
+.avatar{border-radius:50%;flex:none;width:128px;height:128px;object-fit:cover;background:linear-gradient(135deg,#7c3aed,#4c1d95)}
 .cv-body{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:0 3.5rem;border-top:1px solid var(--border)}
 .cv-body section:first-child{border-top:0}
 .cv-main,.cv-side{min-width:0}
+.cv-side{border-left:1px solid var(--border);padding-left:2rem}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .project+.project{margin-top:1rem}
 .project p:last-child{margin:.25rem 0 0;font-size:.9375rem}
 .prose{padding-top:2rem;padding-bottom:2rem;max-width:40rem}
@@ -94,13 +98,15 @@ section h3{font-size:1rem}
 /* The CV is drawn as a single sheet on the dark page background. */
 .sheet{
   --bg:var(--panel);
-  background:var(--panel);width:min(71rem,calc(100% - 2rem));
-  margin:2rem auto;padding:3rem 3.5rem;border:1px solid var(--border);box-shadow:0 12px 40px rgba(0,0,0,.7)
+  background:var(--panel);width:min(65rem,calc(100% - 2rem));
+  margin:2rem auto;padding:3rem;border:1px solid var(--border);box-shadow:0 12px 40px rgba(0,0,0,.7)
 }
-.sheet .cv-header{padding-top:0}
+
 @media screen and (max-width:48rem){
   .sheet{width:100%;margin:0;padding:1.5rem 1.25rem;min-height:0;box-shadow:none;border-width:0}
   .cv-body{grid-template-columns:1fr}
+  .contact{border-left:0;padding-left:0;margin-left:0;grid-template-columns:1fr}
+  .cv-side{border-left:0;padding-left:0}
 }
 
 /* Footer and consent */
@@ -132,11 +138,15 @@ section h3{font-size:1rem}
   .cv-body{gap:0 2rem}
   .avatar{display:none}
   .cv-header{padding:0 0 .5rem}
+  .contact{border-left:0;padding-left:0;grid-template-columns:repeat(3,auto)}
+  .icon{display:none}
   .intro h2{margin-bottom:.25rem}
   body{background:#fff;color:#111}
   .skip-link,.site-header,.site-footer,.consent,.cv-actions{display:none!important}
   h1,h2,h3,h4,.tagline,.brand{color:#000}
-  section>h2{color:#333}
+  section>h2{color:#333;border-left-color:#333}
+  .cv-side{border-left-color:#ccc}
+  .cv-header h1{color:#000}
   a{color:#111;text-decoration:none}
   .meta,.employer-desc{color:#444}
   :root{color-scheme:light}
