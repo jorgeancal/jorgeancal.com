@@ -1,0 +1,41 @@
+{{- $p := .Site.Params -}}
+{{- $sameAs := slice -}}
+{{- range $p.social.list -}}
+  {{- $sameAs = $sameAs | append (cond (strings.HasPrefix .url "//") (printf "https:%s" .url) .url) -}}
+{{- end -}}
+{{- $sameAs = $sameAs | append (index $p.projects.list 0).url -}}
+{{- $person := dict
+  "@type" "Person"
+  "@id" (printf "%s#person" .Site.BaseURL)
+  "name" $p.author
+  "givenName" "Jorge"
+  "familyName" "Andreu Calatayud"
+  "jobTitle" $p.jobTitle
+  "description" $p.description
+  "url" .Site.BaseURL
+  "image" ($p.ogImage | absURL)
+  "email" "mailto:contact@jorgeancal.com"
+  "address" (dict "@type" "PostalAddress" "addressLocality" $p.locality "addressCountry" $p.country)
+  "worksFor" (dict "@type" "Organization" "name" $p.employer "url" "https://www.matillion.com")
+  "alumniOf" (dict "@type" "CollegeOrUniversity" "name" "University of Wales")
+  "knowsAbout" $p.keywords
+  "knowsLanguage" (slice "Spanish" "English")
+  "sameAs" $sameAs
+-}}
+{{- $site := dict
+  "@type" "WebSite"
+  "@id" (printf "%s#website" .Site.BaseURL)
+  "url" .Site.BaseURL
+  "name" $p.author
+  "inLanguage" "en-GB"
+  "publisher" (dict "@id" (printf "%s#person" .Site.BaseURL))
+-}}
+{{- $page := dict
+  "@type" "ProfilePage"
+  "url" .Permalink
+  "name" .Site.Title
+  "inLanguage" "en-GB"
+  "isPartOf" (dict "@id" (printf "%s#website" .Site.BaseURL))
+  "mainEntity" (dict "@id" (printf "%s#person" .Site.BaseURL))
+-}}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" (slice $person $site $page) | jsonify | safeJS }}</script>
