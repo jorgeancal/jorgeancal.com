@@ -1,15 +1,23 @@
 # Page settings
 
 baseURL = "https://jorgeancal.com/"
-languageCode = "en"
-title = " My CV | Jorge Andreu Calatayud"
+locale = "en-GB"
+disableKinds = ["taxonomy", "term", "RSS"]
+title = "Jorge Andreu Calatayud | Senior Staff Site Reliability Engineer"
 theme = "hugo-devresume-theme"
 googleAnalytics = "G-1E8H3S9CNM"
 publishDir="docs"
+enableRobotsTXT = true
 
 [params]
     author = "Jorge Andreu Calatayud"
-    description = "Hi, My name is Jorge Andreu Calatayud and sorry for my English. I’m an IT Engineer. I studied a Bachelor of Science in Business Information Technology, with University of Wales."
+    description = "Jorge Andreu Calatayud is a Senior Staff Site Reliability Engineer based in Shropshire, UK, with 13 years' experience in Kubernetes (EKS), AWS, Terraform, observability (OpenTelemetry, Grafana, Loki, Mimir, Tempo) and platform reliability."
+    jobTitle = "Senior Staff Site Reliability Engineer"
+    employer = "Matillion"
+    locality = "Shropshire"
+    country = "GB"
+    ogImage = "images/og-image.png"
+    keywords = ["Site Reliability Engineer", "SRE", "Kubernetes", "AWS", "EKS", "Terraform", "OpenTelemetry", "Grafana", "Observability", "Go", "Platform Engineering"]
 
     primaryColor = "#2f5233"
     textPrimaryColor = "#292929"
@@ -17,7 +25,7 @@ publishDir="docs"
     [params.profile]
         enable = true
         name = "Jorge Andreu"
-        tagline = "Staff Site Reliability Engineer"
+        tagline = "Senior Staff Site Reliability Engineer"
         avatar = "jorge.png"
 
 
@@ -31,7 +39,7 @@ publishDir="docs"
         text = "contact@jorgeancal.com"
         [[params.contact.list]]
         icon = "fas fa-globe"
-        url = ""
+        url = "https://jorgeancal.com"
         text = "jorgeancal.com"
 
     [params.skills]
@@ -123,120 +131,134 @@ publishDir="docs"
 
     [params.summary]
         enable = true
-        text = "A highly motivated individual who is confident in leading, working with a team, learning quickly and adapting to any situation. A Staff Site Reliability Engineer with 13 years of experience who enjoys the energy and the intensity that is associated with the world of technology."
+        text = "A highly motivated individual who is confident in leading, working with a team, learning quickly and adapting to any situation. A Senior Staff Site Reliability Engineer with 13 years of experience who enjoys the energy and the intensity that is associated with the world of technology."
 
 
     [params.experience]
         enable = true
 
-        [[params.experience.list]]
-        title = "Staff Site Reliability Engineer"
-        dates = "May 2025 – Present"
-        company = "Matillion"
-        details = "Matillion is a cloud-based data integration and transformation platform. It streamlines ETL/ELT processes for modern cloud data warehouses like Snowflake, Redshift, and BigQuery."
-        [[params.experience.list.items]]
-        details = "Leading SRE practices across the platform with a focus on reliability, scalability and automation."
-        [[params.experience.list.items]]
-        details = "Maintaining and evolving the Kubernetes (EKS) platform with Cilium and Linkerd service mesh."
-        [[params.experience.list.items]]
-        details = "Contributing to Maia AI (maia.ai), Matillion's AI-powered data assistant, ensuring platform reliability and scalability for AI-driven workloads."
+        # One entry per employer. Roles are listed newest first; the employer's
+        # date range is derived from its oldest and newest role.
 
         [[params.experience.list]]
-        title = "Senior Site Reliability Engineer"
-        dates = "Feb 2024 – May 2025"
         company = "Matillion"
         details = "Matillion is a cloud-based data integration and transformation platform. It streamlines ETL/ELT processes for modern cloud data warehouses like Snowflake, Redshift, and BigQuery. Its intuitive interface enables users to easily prepare, transform, and load data. Businesses leverage Matillion to enhance analytics and drive better decision-making."
-        [[params.experience.list.items]]
-        details = "Implementing LGTM Grafana Stack"
-        [[params.experience.list.items]]
-        details = "Improved the Kubernetes cluster upgrade process to ensure smooth, zero-downtime upgrades for the SaaS platform."
-        [[params.experience.list.items]]
-        details = "Maintaining Matillion EKS setup including Cilium, Linkerd and AWS RDS/ECS integrations."
-        [[params.experience.list.items]]
-        details = "Maintaining Kafka"
+
+            [[params.experience.list.roles]]
+            title = "Senior Staff Site Reliability Engineer"
+            dates = "Nov 2026 – Present"
+            [[params.experience.list.roles.items]]
+            details = "Promoted to Senior Staff Site Reliability Engineer, continuing to lead SRE practices across the platform."
+
+            [[params.experience.list.roles]]
+            title = "Staff Site Reliability Engineer"
+            dates = "May 2025 – Nov 2026"
+            [[params.experience.list.roles.items]]
+            details = "Leading SRE practices across the platform with a focus on reliability, scalability and automation."
+            [[params.experience.list.roles.items]]
+            details = "Maintaining and evolving the Kubernetes (EKS) platform with Cilium and Linkerd service mesh."
+            [[params.experience.list.roles.items]]
+            details = "Contributing to Maia AI (maia.ai), Matillion's AI-powered data assistant, ensuring platform reliability and scalability for AI-driven workloads."
+
+            [[params.experience.list.roles]]
+            title = "Senior Site Reliability Engineer"
+            dates = "Feb 2024 – May 2025"
+            [[params.experience.list.roles.items]]
+            details = "Implementing LGTM Grafana Stack"
+            [[params.experience.list.roles.items]]
+            details = "Improved the Kubernetes cluster upgrade process to ensure smooth, zero-downtime upgrades for the SaaS platform."
+            [[params.experience.list.roles.items]]
+            details = "Maintaining Matillion EKS setup including Cilium, Linkerd and AWS RDS/ECS integrations."
+            [[params.experience.list.roles.items]]
+            details = "Maintaining Kafka"
+
+            [[params.experience.list.roles]]
+            title = "Site Reliability Engineer"
+            dates = "Jan 2022 – Feb 2024"
+            [[params.experience.list.roles.items]]
+            details = "Migrate all our service to opentelemetry"
+            [[params.experience.list.roles.items]]
+            details = "Implementing our own Observability Platform, we've chosen Grafana, Loki, Tempo and Mimir"
 
         [[params.experience.list]]
-        title = "Site Reliability Engineer"
-        dates = "Jan 2022 – Feb 2024"
-        company = "Matillion"
-        details = "Matillion is a cloud-based data integration and transformation platform. It streamlines ETL/ELT processes for modern cloud data warehouses like Snowflake, Redshift, and BigQuery. Its intuitive interface enables users to easily prepare, transform, and load data. Businesses leverage Matillion to enhance analytics and drive better decision-making."
-        [[params.experience.list.items]]
-        details = "Migrate all our service to opentelemetry"
-        [[params.experience.list.items]]
-        details = "Implementing our own Observability Platform, we've chosen Grafana, Loki, Tempo and Mimir"
-
-        [[params.experience.list]]
-        title = "Senior Site Reliability Engineer"
-        dates = "June 2021 – Dec 2021"
         company = "Crunch"
         details = "Crunch is a medium-sized business whose main product is an accounting software. In this business I was given the opportunity to work as a Site Reliability Engineer and I took it. The role says Site Reliability Engineer but I also do devops and sysadmin work."
 
-        [[params.experience.list]]
-        title = "Site Reliability Engineer"
-        dates = "Mar 2020 – May 2021"
-        company = "Crunch"
-        details = "Crunch is a medium-sized business whose main product is an accounting software. In this business I was given the opportunity to work as a Site Reliability Engineer and I took it. The role says Site Reliability Engineer but I also do devops and sysadmin work."
-        [[params.experience.list.items]]
-        details = "I have migrated the cluster from helm 2 to helm 3 without downtime"
-        [[params.experience.list.items]]
-        details = "We were using Landscaper and we have changed it to helmfile"
-        [[params.experience.list.items]]
-        details = "I am working on implementing Istio in our Clusters"
+            [[params.experience.list.roles]]
+            title = "Senior Site Reliability Engineer"
+            dates = "June 2021 – Dec 2021"
+
+            [[params.experience.list.roles]]
+            title = "Site Reliability Engineer"
+            dates = "Mar 2020 – May 2021"
+            [[params.experience.list.roles.items]]
+            details = "I have migrated the cluster from helm 2 to helm 3 without downtime"
+            [[params.experience.list.roles.items]]
+            details = "We were using Landscaper and we have changed it to helmfile"
+            [[params.experience.list.roles.items]]
+            details = "I am working on implementing Istio in our Clusters"
+
+            [[params.experience.list.roles]]
+            title = "Java Developer"
+            dates = "May 2019 – Mar 2020"
+            [[params.experience.list.roles.items]]
+            details = "We migrated the old security system to Java Services"
+            [[params.experience.list.roles.items]]
+            details = "We were using a Spring Boot services in cluster but the Software System is based in docker"
 
         [[params.experience.list]]
-        title = "Java Developer"
-        dates = "May 2019 – Mar 2020"
-        company = "Crunch"
-        details = "Crunch is a medium-sized business whose main product is an accounting software."
-        [[params.experience.list.items]]
-        details = "We migrated the old security system to Java Services"
-        [[params.experience.list.items]]
-        details = "We were using a Spring Boot services in cluster but the Software System is based in docker"
-
-        [[params.experience.list]]
-        title = "Senior Java Developer"
-        dates = "Oct 2018 – Mar 2019"
         company = "Exis-TI (Indra)"
         details = "I was hired by Exis-TI for working in Indra. Indra is a big business which has a lot of branches around the world."
-        [[params.experience.list.items]]
-        details = "I was working in a project for the Ministry of Agriculture of Cataluña. In this project, we were using Spring, Oracle SQL, AngularJS. My role in this project was Full Stack. I have to say that there was a lot of work in the Backend and I did some work in the front. The Java JDK that we were using was 1.8."
+
+            [[params.experience.list.roles]]
+            title = "Senior Java Developer"
+            dates = "Oct 2018 – Mar 2019"
+            [[params.experience.list.roles.items]]
+            details = "I was working in a project for the Ministry of Agriculture of Cataluña. In this project, we were using Spring, Oracle SQL, AngularJS. My role in this project was Full Stack. I have to say that there was a lot of work in the Backend and I did some work in the front. The Java JDK that we were using was 1.8."
 
         [[params.experience.list]]
-        title = "Senior Java Developer"
-        dates = "Jul 2017 – Oct 2018"
         company = "Hiberus Tecnologia"
         details = "Hiberus Tecnologia is a big business which has various branches in Spain and one in the U.K. It works with a number of businesses in Spain and some of them are well-renowned like FOX, Simply, Vodafone, Movistar, Amadeus, Ibercaja, and many others."
-        [[params.experience.list.items]]
-        details = "I built Java web services, one application on Angularjs and one application on Ionic."
-        [[params.experience.list.items]]
-        details = "I was in a section of the company which was working for Travel-IMS, a branch of Amadeus which carries out work for many travel companies. I was full stack and I used EJB, JSF, Angular and Spring. But due to the large workload of the old application, since we were still selling both versions of the app. I worked more with JSF and EJB."
+
+            [[params.experience.list.roles]]
+            title = "Senior Java Developer"
+            dates = "Jul 2017 – Oct 2018"
+            [[params.experience.list.roles.items]]
+            details = "I built Java web services, one application on Angularjs and one application on Ionic."
+            [[params.experience.list.roles.items]]
+            details = "I was in a section of the company which was working for Travel-IMS, a branch of Amadeus which carries out work for many travel companies. I was full stack and I used EJB, JSF, Angular and Spring. But due to the large workload of the old application, since we were still selling both versions of the app. I worked more with JSF and EJB."
 
         [[params.experience.list]]
-        title = "Java Developer"
-        dates = "Nov 2016 – Jul 2017"
         company = "CPS Ingenieros"
         details = "CPS Ingenieros Obra Civil y Medio Ambiente S.L. is a medium-sized business which manages some branches of the General Direction of Traffic. The headquarters are situated in Valencia."
-        [[params.experience.list.items]]
-        details = "I built Java desk programs and Java web services. These projects were about roads and traffic-related matters."
-        [[params.experience.list.items]]
-        details = "I was in charge of a project which used spring web."
+
+            [[params.experience.list.roles]]
+            title = "Java Developer"
+            dates = "Nov 2016 – Jul 2017"
+            [[params.experience.list.roles.items]]
+            details = "I built Java desk programs and Java web services. These projects were about roads and traffic-related matters."
+            [[params.experience.list.roles.items]]
+            details = "I was in charge of a project which used spring web."
+
         [[params.experience.list]]
-        title = "Junior Developer"
-        dates = "2012-2015"
         company = "Soluciones Informáticas Netymedia"
         details = "Netymedia is a small business that develops websites and custom applications."
-        [[params.experience.list.items]]
-        details = "Various projects and management of two servers: Linux Debian 8, Windows Server 2003."
-        [[params.experience.list.items]]
-        details = "I built Java desk programs, Java web apps and REST web services."
-        [[params.experience.list.items]]
-        details = "I built a PHP Web Service that helps emergency services in the event that a chemical business explodes."
-        [[params.experience.list.items]]
-        details = "This application allowed the emergency services to see the emergency plan while they are on the way to the incident, in this way, the response time is faster than before."
-        [[params.experience.list.items]]
-        details = "Web Development – I built websites for various clients."
-        [[params.experience.list.items]]
-        details = "I was accountable for several interns."
+
+            [[params.experience.list.roles]]
+            title = "Junior Developer"
+            dates = "2012-2015"
+            [[params.experience.list.roles.items]]
+            details = "Various projects and management of two servers: Linux Debian 8, Windows Server 2003."
+            [[params.experience.list.roles.items]]
+            details = "I built Java desk programs, Java web apps and REST web services."
+            [[params.experience.list.roles.items]]
+            details = "I built a PHP Web Service that helps emergency services in the event that a chemical business explodes."
+            [[params.experience.list.roles.items]]
+            details = "This application allowed the emergency services to see the emergency plan while they are on the way to the incident, in this way, the response time is faster than before."
+            [[params.experience.list.roles.items]]
+            details = "Web Development – I built websites for various clients."
+            [[params.experience.list.roles.items]]
+            details = "I was accountable for several interns."
 
 
     [params.projects]
