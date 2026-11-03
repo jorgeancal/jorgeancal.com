@@ -32,8 +32,8 @@ a:hover{color:var(--accent-hover)}
 .brand{color:var(--text);font-weight:700;text-decoration:none;letter-spacing:.05em}
 
 /* Hero */
-.cv-header h1{font-size:clamp(1.75rem,5vw,2.5rem);letter-spacing:.02em}
-.tagline{color:var(--accent);font-size:1.25rem;margin:.25rem 0 1rem}
+.cv-header h1{font-size:clamp(2rem,6.5vw,3.5rem);letter-spacing:.06em;text-transform:uppercase;line-height:1.1}
+.tagline{color:var(--accent);font-size:1rem;letter-spacing:.04em;margin:.75rem 0 1.25rem}
 .cv-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.25rem 0 0}
 .btn{display:inline-block;border:1px solid var(--border);border-radius:.25rem;color:var(--text);font-weight:700;padding:.5rem 1rem;text-decoration:none;background:transparent;font-family:inherit;font-size:1rem;cursor:pointer}
 .btn:hover{border-color:var(--accent);color:var(--text)}
