@@ -33,7 +33,7 @@
 {{- $page := dict
   "@type" "ProfilePage"
   "url" .Permalink
-  "name" .Site.Title
+  "name" (.Title | default .Site.Title)
   "inLanguage" "en-GB"
   "isPartOf" (dict "@id" (printf "%s#website" .Site.BaseURL))
   "mainEntity" (dict "@id" (printf "%s#person" .Site.BaseURL))

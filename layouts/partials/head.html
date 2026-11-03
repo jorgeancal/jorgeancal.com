@@ -1,6 +1,6 @@
 
-    {{- $title := .Site.Title -}}
-    {{- $desc := .Site.Params.description -}}
+    {{- $title := cond .IsHome .Site.Title (printf "%s | %s" .Title .Site.Params.author) -}}
+    {{- $desc := .Description | default .Site.Params.description -}}
     {{- $image := .Site.Params.ogImage | absURL -}}
     <title>{{ $title }}</title>
 
@@ -17,7 +17,7 @@
     <link rel="canonical" href="{{ .Permalink }}">
 
     <!-- Open Graph -->
-    <meta property="og:type" content="profile">
+    <meta property="og:type" content="{{ if or .IsHome (eq .Layout "cv") }}profile{{ else }}website{{ end }}">
     <meta property="og:site_name" content="{{ .Site.Params.author }}">
     <meta property="og:locale" content="en_GB">
     <meta property="og:title" content="{{ $title }}">
@@ -44,11 +44,11 @@
     <link rel="apple-touch-icon" href="{{ "images/apple-touch-icon.png" | absURL }}">
 
     <!-- Structured data -->
-    {{ partial "schema.html" . }}
+    {{ if or .IsHome (eq .Layout "cv") }}{{ partial "schema.html" . }}{{ end }}
 
     <!-- Fonts (self-hosted) -->
     <link rel="preload" href="{{ "fonts/roboto-latin-400-normal.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="{{ "fonts/roboto-latin-700-normal.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
-    <!-- Theme SCSS -->
-    {{ $style := resources.Get "scss/devresume.scss" | resources.ExecuteAsTemplate "scss/devresume.scss" . | toCSS (dict "targetPath" "assets/css/devresume.css") | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    <!-- Styles (inlined: small, avoids a render-blocking request) -->
+    {{ $css := resources.Get "css/site.css" | resources.ExecuteAsTemplate "css/site.css" . | minify }}
+    <style>{{ $css.Content | safeCSS }}</style>

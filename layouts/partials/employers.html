@@ -1,0 +1,37 @@
+{{- /* Employers with their roles, newest first. Pass dict "full" true to include each role's bullets. */ -}}
+{{- $full := .full -}}
+{{- range site.Params.experience.list }}
+{{- $roles := .roles }}
+{{- $newest := index $roles 0 }}
+{{- $oldest := index $roles (sub (len $roles) 1) }}
+{{- $start := index (split (replaceRE `\s*[–-]\s*` "|" $oldest.dates) "|") 0 }}
+{{- $endParts := split (replaceRE `\s*[–-]\s*` "|" $newest.dates) "|" }}
+{{- $end := index $endParts (sub (len $endParts) 1) }}
+            <div class="employer">
+                <div class="employer-heading">
+                    <h3>{{ .company }}</h3>
+                    {{- if gt (len $roles) 1 }}
+                    <p class="meta">{{ $start }} – {{ $end }} · {{ len $roles }} roles</p>
+                    {{- end }}
+                </div>
+                {{- if $full }}{{ with .details }}
+                <p class="employer-desc">{{ . | markdownify }}</p>{{ end }}{{ end }}
+                <ol class="roles{{ if gt (len $roles) 1 }} has-progression{{ end }}">
+                    {{- range $roles }}
+                    <li class="role{{ if strings.HasSuffix .dates "Present" }} role-current{{ end }}">
+                        <div class="role-heading">
+                            <h4>{{ .title }}</h4>
+                            <p class="meta">{{ .dates }}</p>
+                        </div>
+                        {{- if and $full .items }}
+                        <ul>
+                            {{- range .items }}
+                            <li>{{ .details | markdownify }}</li>
+                            {{- end }}
+                        </ul>
+                        {{- end }}
+                    </li>
+                    {{- end }}
+                </ol>
+            </div>
+{{- end }}
