@@ -3,7 +3,7 @@
 {{- range $p.social.list -}}
   {{- $sameAs = $sameAs | append (cond (strings.HasPrefix .url "//") (printf "https:%s" .url) .url) -}}
 {{- end -}}
-{{- $sameAs = $sameAs | append (index $p.projects.list 0).url -}}
+{{- $sameAs = $sameAs | append $p.notebook -}}
 {{- $person := dict
   "@type" "Person"
   "@id" (printf "%s#person" .Site.BaseURL)

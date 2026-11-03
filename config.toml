@@ -46,6 +46,7 @@ disableKinds = ["taxonomy", "term", "RSS"]
     country = "GB"
     ogImage = "images/og-image.png"
     cvPdf = "jorge-andreu-calatayud-cv.pdf"
+    notebook = "https://jorgesnotebook.com"
     keywords = ["Site Reliability Engineer", "SRE", "Kubernetes", "AWS", "EKS", "Terraform", "OpenTelemetry", "Grafana", "Observability", "Go", "Platform Engineering"]
 
     [params.profile]
@@ -212,7 +213,7 @@ disableKinds = ["taxonomy", "term", "RSS"]
             [[params.experience.list.roles.items]]
             details = "Migrated the legacy security system to Java services."
             [[params.experience.list.roles.items]]
-            details = "Ran Spring Boot services in the cluster alongside a Docker-based software system."
+            details = "Ran Spring Boot services in the cluster, while the main software system was Docker-based."
 
         [[params.experience.list]]
         company = "Exis-TI (Indra)"

@@ -2,6 +2,7 @@
 {{- $full := .full -}}
 {{- range site.Params.experience.list }}
 {{- $roles := .roles }}
+{{- if not $roles }}{{ errorf "employer %q has no roles" .company }}{{ end }}
 {{- $newest := index $roles 0 }}
 {{- $oldest := index $roles (sub (len $roles) 1) }}
 {{- $start := index (split (replaceRE `\s*[–-]\s*` "|" $oldest.dates) "|") 0 }}

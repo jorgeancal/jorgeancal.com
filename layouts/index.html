@@ -70,7 +70,7 @@
                     {{- range site.Params.social.list }}
                     <li>{{ partial "icon.html" (dict "name" .icon "class" "mr") }}<a href="{{ .url }}" rel="me noopener">{{ .title }}</a></li>
                     {{- end }}
-                    <li>{{ partial "icon.html" (dict "name" "globe" "class" "mr") }}<a href="https://jorgesnotebook.com" rel="noopener">Jorge's Notebook</a></li>
+                    <li>{{ partial "icon.html" (dict "name" "globe" "class" "mr") }}<a href="{{ site.Params.notebook }}" rel="noopener">Jorge's Notebook</a></li>
                     <li>{{ partial "icon.html" (dict "name" "map-marker-alt" "class" "mr") }}{{ site.Params.contact.location }}</li>
                 </ul>
             </section>
