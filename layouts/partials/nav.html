@@ -1,11 +1,7 @@
+{{- if not .IsHome }}
     <header class="site-header">
-        <nav class="container wide" aria-label="Primary">
-            {{- if not .IsHome }}<a class="brand" href="{{ "/" | relURL }}">{{ site.Params.profile.fullName }}</a>{{ end }}
-            <ul>
-                <li><a href="{{ "/#experience" | relURL }}">Experience</a></li>
-                <li><a href="{{ "/#projects" | relURL }}">Projects</a></li>
-                <li><a href="{{ "/#skills" | relURL }}">Skills</a></li>
-                <li><a href="{{ "/#contact" | relURL }}">Contact</a></li>
-            </ul>
+        <nav class="container" aria-label="Primary">
+            <a class="brand" href="{{ "/" | relURL }}">{{ site.Params.profile.fullName }}</a>
         </nav>
     </header>
+{{- end }}
