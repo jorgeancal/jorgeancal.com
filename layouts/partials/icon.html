@@ -1,0 +1,8 @@
+{{- /* Inline SVG icon from assets/icons. Accepts a Font Awesome class string such as "fab fa-github-square" or a bare name. Decorative: hidden from assistive technology. */ -}}
+{{- $name := .name -}}
+{{- with findRE `fa-[a-z0-9-]+` .name -}}{{- $name = strings.TrimPrefix "fa-" (index . 0) -}}{{- end -}}
+{{- with resources.Get (printf "icons/%s.svg" $name) -}}
+{{- .Content | replaceRE `<!--.*?-->` "" | replaceRE `<svg ` (printf `<svg class="icon %s" aria-hidden="true" focusable="false" fill="currentColor" ` ($.class | default "")) | safeHTML -}}
+{{- else -}}
+{{- warnf "icon %q not found in assets/icons" $name -}}
+{{- end -}}

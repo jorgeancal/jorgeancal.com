@@ -5,7 +5,7 @@
                         {{ range .Site.Params.social.list }}
                         <li class="list-inline-item mb-lg-0 mr-3">
                             <a class="resume-link" href="{{ .url }}" target="_blank" rel="me noopener" aria-label="{{ .title }}">
-                                <i class="{{ .icon }} fa-2x mr-2" data-fa-transform="down-4"></i>
+                                {{ partial "icon.html" (dict "name" .icon "class" "icon-lg mr-2") }}
                                 <span class="d-none d-lg-inline-block text-muted">{{ .title }}</span>
                             </a>
                         </li>
