@@ -91,6 +91,18 @@ section h3{font-size:1rem}
 .prose h1{margin-bottom:1rem}
 .prose h2{color:var(--text);font-size:1.125rem;margin:1.5rem 0 .5rem}
 
+/* The CV is drawn as an A4 sheet on the dark page background. */
+.sheet{
+  --bg:var(--panel);
+  background:var(--panel);width:min(210mm,calc(100% - 2rem));min-height:297mm;
+  margin:2rem auto;padding:16mm 15mm;border:1px solid var(--border);box-shadow:0 12px 40px rgba(0,0,0,.7)
+}
+.sheet .cv-header{padding-top:0}
+@media screen and (max-width:48rem){
+  .sheet{width:100%;margin:0;padding:1.5rem 1.25rem;min-height:0;box-shadow:none;border-width:0}
+  .cv-body{grid-template-columns:1fr}
+}
+
 /* Footer and consent */
 .site-footer{border-top:1px solid var(--border);color:var(--muted);font-size:.8125rem;padding:1.5rem 0 5rem}
 .site-footer .container{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1rem}
@@ -103,7 +115,6 @@ section h3{font-size:1rem}
 .consent-actions{display:flex;gap:.75rem}
 
 @media (max-width:40rem){
-  .cv-body{grid-template-columns:1fr}
   .intro{flex-direction:column;align-items:flex-start;gap:1.25rem}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -135,6 +146,7 @@ section h3{font-size:1rem}
   section{border-color:#ccc;padding:.6rem 0}
   .cv-body{border-color:#ccc}
   .container{max-width:none;padding:0}
+  .sheet{width:auto;min-height:0;margin:0;padding:0;box-shadow:none;border:0;background:none}
   .has-progression::before{background:#ccc}
   .has-progression .role::before{background:#fff;border-color:#666}
   .has-progression .role-current::before,.roles .role-current::before{background:#000;border-color:#000}
