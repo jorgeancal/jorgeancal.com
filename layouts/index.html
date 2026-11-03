@@ -1,0 +1,101 @@
+{{ define "main" }}
+        <div class="sheet cv">
+            <header class="cv-header">
+                <div>
+                    <h1>{{ site.Params.profile.name }}</h1>
+                    <p class="tagline">{{ site.Params.profile.tagline }}</p>
+                </div>
+                <ul class="links contact" id="contact">
+                    {{- range site.Params.contact.list }}
+                    <li>{{ partial "icon.html" (dict "name" .icon "class" "mr") }}<a href="{{ .url | safeURL }}">{{ .text }}</a></li>
+                    {{- end }}
+                    {{- range site.Params.social.list }}
+                    <li{{ if in .icon "twitter" }} class="print-hide"{{ end }}>{{ partial "icon.html" (dict "name" .icon "class" "mr") }}<a href="{{ .url }}" rel="me noopener">{{ .title }}</a></li>
+                    {{- end }}
+                    <li class="print-hide">{{ partial "icon.html" (dict "name" "globe" "class" "mr") }}<a href="{{ site.Params.notebook }}" rel="noopener">Jorge's Notebook</a></li>
+                    <li>{{ partial "icon.html" (dict "name" "map-marker-alt" "class" "mr") }}{{ site.Params.contact.location }}</li>
+                </ul>
+            </header>
+
+            <section id="summary" class="intro" aria-labelledby="h-summary">
+                {{- $img := resources.Get (printf "images/%s" site.Params.profile.avatar) }}
+                {{- with $img }}{{ $img = .Resize "240x240 webp q85" }}
+                <img class="avatar" src="{{ $img.RelPermalink }}" alt="" width="120" height="120" decoding="async">
+                {{- end }}
+                <div>
+                    <h2 id="h-summary" class="sr-only">Summary</h2>
+                    <p>{{ site.Params.summary.text }}</p>
+                    <p class="cv-actions"><a class="btn btn-primary" href="{{ site.Params.cvPdf | relURL }}" download>Download PDF</a></p>
+                </div>
+            </section>
+
+            <div class="cv-body">
+                <div class="cv-main">
+                    <section id="experience" aria-labelledby="h-experience">
+                        <h2 id="h-experience">Work experience</h2>
+{{ partial "employers.html" . }}
+                    </section>
+
+                    <section id="projects" aria-labelledby="h-projects">
+                        <h2 id="h-projects">Projects</h2>
+                        {{- range site.Params.projects.list }}
+                        <article class="project">
+                            <h3><a href="{{ .url }}">{{ .title }}</a></h3>
+                            <p class="meta">{{ .meta }}</p>
+                            <p>{{ .tagline }}</p>
+                        </article>
+                        {{- end }}
+                    </section>
+                </div>
+
+                <div class="cv-side">
+                    <section id="education" aria-labelledby="h-education">
+                        <h2 id="h-education">Education</h2>
+                        {{- range site.Params.education.list }}
+                        <h3>{{ .degree }}</h3>
+                        <p class="meta">{{ .university }}, {{ .dates }}</p>
+                        {{- end }}
+                    </section>
+
+                    <section id="awards" aria-labelledby="h-awards">
+                        <h2 id="h-awards">Awards</h2>
+                        {{- range site.Params.awards.list }}
+                        <h3>{{ .name }}</h3>
+                        <p class="meta">{{ .date }}</p>
+                        <p>{{ .body }}</p>
+                        {{- end }}
+                    </section>
+
+                    <section id="skills" aria-labelledby="h-skills">
+                        <h2 id="h-skills">Skills</h2>
+                        {{- range site.Params.skills.list }}
+                        <h3>{{ .title }}</h3>
+                        <ul class="plain">
+                            {{- range .items }}
+                            <li>{{ .details }}</li>
+                            {{- end }}
+                        </ul>
+                        {{- end }}
+                    </section>
+
+                    <section aria-labelledby="h-languages">
+                        <h2 id="h-languages">Languages</h2>
+                        <ul class="plain">
+                            {{- range site.Params.languages.list }}
+                            <li>{{ .name }} ({{ .level }})</li>
+                            {{- end }}
+                        </ul>
+                    </section>
+
+                    <section aria-labelledby="h-interests">
+                        <h2 id="h-interests">Interests</h2>
+                        <ul class="plain">
+                            {{- range site.Params.interests.list }}
+                            <li>{{ .name }}</li>
+                            {{- end }}
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+{{ end }}

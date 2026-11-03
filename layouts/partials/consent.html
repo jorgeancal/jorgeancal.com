@@ -1,0 +1,53 @@
+{{- with site.Config.Services.GoogleAnalytics.ID -}}
+    <div id="consent" class="consent" role="region" aria-label="Analytics consent" hidden>
+        <p>May I use Google Analytics to see how this site is used? It is only loaded if you accept. <a href="{{ "/privacy/" | relURL }}">Privacy</a></p>
+        <div class="consent-actions">
+            <button type="button" id="consent-accept" class="btn btn-primary">Accept</button>
+            <button type="button" id="consent-decline" class="btn">Decline</button>
+        </div>
+    </div>
+    <script>
+    (function () {
+        var id = {{ . }}, key = "analytics-consent", box = document.getElementById("consent"),
+            settings = document.getElementById("consent-settings");
+        function load() {
+            if (window.gtagLoaded) return;
+            window.gtagLoaded = true;
+            var s = document.createElement("script");
+            s.async = true;
+            s.src = "https://www.googletagmanager.com/gtag/js?id=" + id;
+            document.head.appendChild(s);
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = function () { dataLayer.push(arguments); };
+            gtag("js", new Date());
+            gtag("config", id);
+        }
+        function clearCookies() {
+            var host = location.hostname, parts = host.split("."),
+                domains = ["", "; domain=" + host, "; domain=." + host, "; domain=." + parts.slice(-2).join(".")];
+            document.cookie.split(";").forEach(function (c) {
+                var n = c.split("=")[0].trim();
+                if (n === "_ga" || n.indexOf("_ga_") === 0) {
+                    domains.forEach(function (d) {
+                        document.cookie = n + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/" + d;
+                    });
+                }
+            });
+        }
+        function choose(v) {
+            try { localStorage.setItem(key, v); } catch (e) {}
+            box.hidden = true;
+            if (v === "granted") { window["ga-disable-" + id] = false; load(); }
+            else { window["ga-disable-" + id] = true; clearCookies(); }
+            settings.focus();
+        }
+        var saved = null;
+        try { saved = localStorage.getItem(key); } catch (e) {}
+        settings.hidden = false;
+        if (saved === "granted") load(); else { window["ga-disable-" + id] = true; if (saved !== "denied") box.hidden = false; }
+        document.getElementById("consent-accept").onclick = function () { choose("granted"); };
+        document.getElementById("consent-decline").onclick = function () { choose("denied"); };
+        settings.onclick = function () { box.hidden = false; document.getElementById("consent-accept").focus(); };
+    })();
+    </script>
+{{- end -}}

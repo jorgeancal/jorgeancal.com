@@ -1,0 +1,7 @@
+{{- if not .IsHome }}
+    <header class="site-header">
+        <nav class="container" aria-label="Primary">
+            <a class="brand" href="{{ "/" | relURL }}">{{ site.Params.profile.fullName }}</a>
+        </nav>
+    </header>
+{{- end }}

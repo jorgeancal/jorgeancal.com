@@ -1,42 +1,217 @@
 # Page settings
 
 baseURL = "https://jorgeancal.com/"
-languageCode = "en"
-title = " My CV | Jorge Andreu Calatayud"
-theme = "hugo-devresume-theme"
-googleAnalytics = "G-1E8H3S9CNM"
-publishDir="docs"
+locale = "en-GB"
+title = "Jorge Andreu Calatayud | Senior Staff Site Reliability Engineer"
+publishDir = "docs"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term", "RSS"]
+
+# Analytics only loads after the visitor accepts (see layouts/partials/consent.html).
+[services.googleAnalytics]
+    id = "G-1E8H3S9CNM"
+
+# Do not publish the unreferenced full-size source images that sit in static/ and content/.
+[module]
+    [[module.mounts]]
+        source = "content"
+        target = "content"
+        files = ["! **.png"]
+    [[module.mounts]]
+        source = "static"
+        target = "static"
+        files = ["! images/j.png", "! images/jorge.png"]
+    [[module.mounts]]
+        source = "layouts"
+        target = "layouts"
+    [[module.mounts]]
+        source = "data"
+        target = "data"
+    [[module.mounts]]
+        source = "assets"
+        target = "assets"
+    [[module.mounts]]
+        source = "i18n"
+        target = "i18n"
+    [[module.mounts]]
+        source = "archetypes"
+        target = "archetypes"
 
 [params]
     author = "Jorge Andreu Calatayud"
-    description = "Hi, My name is Jorge Andreu Calatayud and sorry for my English. I’m an IT Engineer. I studied a Bachelor of Science in Business Information Technology, with University of Wales."
-
-    primaryColor = "#2f5233"
-    textPrimaryColor = "#292929"
+    description = "Jorge Andreu Calatayud is a Senior Staff Site Reliability Engineer in Shropshire, UK, specialising in AWS, Kubernetes, observability and platform reliability."
+    jobTitle = "Senior Staff Site Reliability Engineer"
+    employer = "Matillion"
+    locality = "Shropshire"
+    country = "GB"
+    ogImage = "images/og-image.png"
+    cvPdf = "jorge-andreu-calatayud-cv.pdf"
+    notebook = "https://jorgesnotebook.com"
+    keywords = ["Site Reliability Engineer", "SRE", "Kubernetes", "AWS", "EKS", "Terraform", "OpenTelemetry", "Grafana", "Observability", "Go", "Platform Engineering"]
 
     [params.profile]
-        enable = true
         name = "Jorge Andreu"
-        tagline = "Staff Site Reliability Engineer"
+        fullName = "Jorge Andreu Calatayud"
+        tagline = "Senior Staff Site Reliability Engineer"
         avatar = "jorge.png"
 
+    [params.summary]
+        text = "I design and operate reliable cloud-native platforms. My experience spans AWS, Kubernetes, distributed systems, observability and backend engineering in Go and Java, across 13 years in software and infrastructure."
 
     [params.contact]
-        enable = true
         location = "Shropshire, UK"
 
         [[params.contact.list]]
         icon = "fas fa-envelope-square"
         url = "mailto:contact@jorgeancal.com"
         text = "contact@jorgeancal.com"
-        [[params.contact.list]]
-        icon = "fas fa-globe"
-        url = ""
-        text = "jorgeancal.com"
+
+    [params.projects]
+        [[params.projects.list]]
+        title = "Zagalin"
+        meta = "Grafana app plugin · TypeScript · Apache-2.0"
+        url = "https://github.com/jorgesnotebook/jorgeancal-zagalin-app"
+        tagline = "An AI assistant for Grafana. It uses the dashboard and time range you are viewing to answer questions, generate PromQL and LogQL queries and help troubleshoot."
+
+        [[params.projects.list]]
+        title = "OpenTelemetry Helm charts"
+        meta = "Upstream contribution · Helm"
+        url = "https://github.com/open-telemetry/opentelemetry-helm-charts/pull/827"
+        tagline = "Fixed the checksum configuration in the StatefulSet template of the official OpenTelemetry Helm charts (merged pull request)."
+
+        [[params.projects.list]]
+        title = "wg-users"
+        meta = "Command-line tool · Go · MIT"
+        url = "https://github.com/jorgeancal/wg-users"
+        tagline = "A small Go tool for managing WireGuard users from the terminal: create, update, delete and list users. Early-stage."
+
+        [[params.projects.list]]
+        title = "Jorge's Notebook"
+        meta = "Blog"
+        url = "https://jorgesnotebook.com"
+        tagline = "Notes on Kubernetes and engineering, including a highly available k3s homelab with Cilium and MetalLB, encrypting Kubernetes secrets with SOPS and Helmfile, and structuring Helmfile releases."
+
+    [params.experience]
+        # One entry per employer. Roles are listed newest first; the employer's
+        # date range is derived from its oldest and newest role.
+
+        [[params.experience.list]]
+        company = "Matillion"
+        details = "Cloud-based data integration and transformation platform for modern cloud data warehouses such as Snowflake, Redshift and BigQuery."
+
+            [[params.experience.list.roles]]
+            title = "Senior Staff Site Reliability Engineer"
+            dates = "Nov 2026 – Present"
+            [[params.experience.list.roles.items]]
+            details = "Lead SRE practices across the platform, with a focus on reliability, scalability and automation."
+            [[params.experience.list.roles.items]]
+            details = "Maintain and evolve the Kubernetes (EKS) platform, including the Cilium and Linkerd service mesh."
+            [[params.experience.list.roles.items]]
+            details = "Contribute to Maia AI (maia.ai), Matillion's AI-powered data assistant, supporting the reliability and scalability of its workloads."
+
+            [[params.experience.list.roles]]
+            title = "Staff Site Reliability Engineer"
+            dates = "May 2025 – Nov 2026"
+
+            [[params.experience.list.roles]]
+            title = "Senior Site Reliability Engineer"
+            dates = "Feb 2024 – May 2025"
+            [[params.experience.list.roles.items]]
+            details = "Implemented the LGTM Grafana stack (Loki, Grafana, Tempo and Mimir)."
+            [[params.experience.list.roles.items]]
+            details = "Improved the Kubernetes cluster upgrade process so that upgrades to the SaaS platform are smooth and cause no downtime."
+            [[params.experience.list.roles.items]]
+            details = "Maintained the EKS platform, including Cilium, Linkerd and the AWS RDS and ECS integrations."
+            [[params.experience.list.roles.items]]
+            details = "Maintained Kafka."
+
+            [[params.experience.list.roles]]
+            title = "Site Reliability Engineer"
+            dates = "Jan 2022 – Feb 2024"
+            [[params.experience.list.roles.items]]
+            details = "Migrated services to OpenTelemetry."
+            [[params.experience.list.roles.items]]
+            details = "Implemented Matillion's own observability platform, built on Grafana, Loki, Tempo and Mimir."
+
+        [[params.experience.list]]
+        company = "Crunch"
+        details = "Accounting software company. Although the title was Site Reliability Engineer, the work also covered DevOps and systems administration."
+
+            [[params.experience.list.roles]]
+            title = "Senior Site Reliability Engineer"
+            dates = "Jun 2021 – Dec 2021"
+
+            [[params.experience.list.roles]]
+            title = "Site Reliability Engineer"
+            dates = "Mar 2020 – May 2021"
+            [[params.experience.list.roles.items]]
+            details = "Migrated the Kubernetes cluster from Helm 2 to Helm 3 without downtime."
+            [[params.experience.list.roles.items]]
+            details = "Replaced Landscaper with Helmfile."
+            [[params.experience.list.roles.items]]
+            details = "Began implementing Istio in the clusters."
+
+            [[params.experience.list.roles]]
+            title = "Java Developer"
+            dates = "May 2019 – Mar 2020"
+            [[params.experience.list.roles.items]]
+            details = "Migrated the legacy security system to Java services."
+            [[params.experience.list.roles.items]]
+            details = "Ran Spring Boot services in the cluster, while the main software system was Docker-based."
+
+        [[params.experience.list]]
+        company = "Exis-TI (Indra)"
+        details = "Hired by Exis-TI to work at Indra, a large technology company with branches around the world."
+
+            [[params.experience.list.roles]]
+            title = "Senior Java Developer"
+            dates = "Oct 2018 – Mar 2019"
+            [[params.experience.list.roles.items]]
+            details = "Full-stack developer on a project for the Ministry of Agriculture of Catalonia, using Spring, Oracle SQL, AngularJS and Java 8. Most of the work was in the backend."
+
+        [[params.experience.list]]
+        company = "Hiberus Tecnologia"
+        details = "Technology consultancy with branches in Spain and the UK. Clients include FOX, Simply, Vodafone, Movistar, Amadeus and Ibercaja."
+
+            [[params.experience.list.roles]]
+            title = "Senior Java Developer"
+            dates = "Jul 2017 – Oct 2018"
+            [[params.experience.list.roles.items]]
+            details = "Built Java web services, an AngularJS application and an Ionic application."
+            [[params.experience.list.roles.items]]
+            details = "Worked on Travel-IMS, the Amadeus business unit serving travel companies, as a full-stack developer using EJB, JSF, Angular and Spring. Most of the work was on the legacy JSF and EJB application, as both versions were still being sold."
+
+        [[params.experience.list]]
+        company = "CPS Ingenieros"
+        details = "Civil engineering and environmental consultancy headquartered in Valencia, managing branches of the General Directorate of Traffic."
+
+            [[params.experience.list.roles]]
+            title = "Java Developer"
+            dates = "Nov 2016 – Jul 2017"
+            [[params.experience.list.roles.items]]
+            details = "Built Java desktop programs and web services for road and traffic projects."
+            [[params.experience.list.roles.items]]
+            details = "Was responsible for a project built on Spring web."
+
+        [[params.experience.list]]
+        company = "Soluciones Informáticas Netymedia"
+        details = "Small company building websites and custom applications."
+
+            [[params.experience.list.roles]]
+            title = "Junior Developer"
+            dates = "2012 – 2015"
+            [[params.experience.list.roles.items]]
+            details = "Managed two servers (Debian 8 and Windows Server 2003) and worked on a range of projects."
+            [[params.experience.list.roles.items]]
+            details = "Built Java desktop programs, Java web applications and REST web services."
+            [[params.experience.list.roles.items]]
+            details = "Built a PHP web service that gives emergency services access to a site's emergency plan while they are on the way to an incident, such as a chemical plant explosion, so that they can respond faster."
+            [[params.experience.list.roles.items]]
+            details = "Built websites for clients."
+            [[params.experience.list.roles.items]]
+            details = "Responsible for several interns."
 
     [params.skills]
-        enable = true
-
         [[params.skills.list]]
         title = "Technical"
         [[params.skills.list.items]]
@@ -60,7 +235,7 @@ publishDir="docs"
         [[params.skills.list.items]]
         details = "Docker, Traefik, Nginx"
         [[params.skills.list.items]]
-        details = "DB Server (MySQL, PostgreSQL, Oracle, SQL Server)"
+        details = "Database servers (MySQL, PostgreSQL, Oracle, SQL Server)"
         [[params.skills.list.items]]
         details = "JavaScript, AngularJS, HTML/CSS/Bootstrap"
         [[params.skills.list.items]]
@@ -76,28 +251,19 @@ publishDir="docs"
         [[params.skills.list.items]]
         details = "Effective communication"
 
-
     [params.education]
-        enable = true
-
         [[params.education.list]]
-        degree = "B.Sc. in BUSINESS INFORMATION TECHNOLOGY"
+        degree = "B.Sc. in Business Information Technology"
         university = "University of Wales"
-        dates = "2013 - June 2017"
-
+        dates = "2013 – June 2017"
 
     [params.awards]
-        enable = true
-
         [[params.awards.list]]
-        name = "Winner of IV Teaching Innovation Day of San Jorge University"
-        body = "Certificate granted express recognition for the quality of pedagogical approach, its impact on student learning and its potential as an innovative practice in the classroom, to the best Practice (Non-University Education category): Road to the division."
+        name = "Winner of the IV Teaching Innovation Day of San Jorge University"
+        body = "Certificate granted express recognition for the quality of pedagogical approach, its impact on student learning and its potential as an innovative practice in the classroom, to the best practice (Non-University Education category): Road to the division."
         date = "2014"
 
-
     [params.languages]
-        enable = true
-
         [[params.languages.list]]
         name = "Spanish"
         level = "Native"
@@ -105,11 +271,7 @@ publishDir="docs"
         name = "English"
         level = "Professional"
 
-
-
     [params.interests]
-        enable = true
-
         [[params.interests.list]]
         name = "Photography"
         [[params.interests.list]]
@@ -119,160 +281,19 @@ publishDir="docs"
         [[params.interests.list]]
         name = "Reading"
 
-
-
-    [params.summary]
-        enable = true
-        text = "A highly motivated individual who is confident in leading, working with a team, learning quickly and adapting to any situation. A Staff Site Reliability Engineer with 13 years of experience who enjoys the energy and the intensity that is associated with the world of technology."
-
-
-    [params.experience]
-        enable = true
-
-        [[params.experience.list]]
-        title = "Staff Site Reliability Engineer"
-        dates = "May 2025 – Present"
-        company = "Matillion"
-        details = "Matillion is a cloud-based data integration and transformation platform. It streamlines ETL/ELT processes for modern cloud data warehouses like Snowflake, Redshift, and BigQuery."
-        [[params.experience.list.items]]
-        details = "Leading SRE practices across the platform with a focus on reliability, scalability and automation."
-        [[params.experience.list.items]]
-        details = "Maintaining and evolving the Kubernetes (EKS) platform with Cilium and Linkerd service mesh."
-        [[params.experience.list.items]]
-        details = "Contributing to Maia AI (maia.ai), Matillion's AI-powered data assistant, ensuring platform reliability and scalability for AI-driven workloads."
-
-        [[params.experience.list]]
-        title = "Senior Site Reliability Engineer"
-        dates = "Feb 2024 – May 2025"
-        company = "Matillion"
-        details = "Matillion is a cloud-based data integration and transformation platform. It streamlines ETL/ELT processes for modern cloud data warehouses like Snowflake, Redshift, and BigQuery. Its intuitive interface enables users to easily prepare, transform, and load data. Businesses leverage Matillion to enhance analytics and drive better decision-making."
-        [[params.experience.list.items]]
-        details = "Implementing LGTM Grafana Stack"
-        [[params.experience.list.items]]
-        details = "Improved the Kubernetes cluster upgrade process to ensure smooth, zero-downtime upgrades for the SaaS platform."
-        [[params.experience.list.items]]
-        details = "Maintaining Matillion EKS setup including Cilium, Linkerd and AWS RDS/ECS integrations."
-        [[params.experience.list.items]]
-        details = "Maintaining Kafka"
-
-        [[params.experience.list]]
-        title = "Site Reliability Engineer"
-        dates = "Jan 2022 – Feb 2024"
-        company = "Matillion"
-        details = "Matillion is a cloud-based data integration and transformation platform. It streamlines ETL/ELT processes for modern cloud data warehouses like Snowflake, Redshift, and BigQuery. Its intuitive interface enables users to easily prepare, transform, and load data. Businesses leverage Matillion to enhance analytics and drive better decision-making."
-        [[params.experience.list.items]]
-        details = "Migrate all our service to opentelemetry"
-        [[params.experience.list.items]]
-        details = "Implementing our own Observability Platform, we've chosen Grafana, Loki, Tempo and Mimir"
-
-        [[params.experience.list]]
-        title = "Senior Site Reliability Engineer"
-        dates = "June 2021 – Dec 2021"
-        company = "Crunch"
-        details = "Crunch is a medium-sized business whose main product is an accounting software. In this business I was given the opportunity to work as a Site Reliability Engineer and I took it. The role says Site Reliability Engineer but I also do devops and sysadmin work."
-
-        [[params.experience.list]]
-        title = "Site Reliability Engineer"
-        dates = "Mar 2020 – May 2021"
-        company = "Crunch"
-        details = "Crunch is a medium-sized business whose main product is an accounting software. In this business I was given the opportunity to work as a Site Reliability Engineer and I took it. The role says Site Reliability Engineer but I also do devops and sysadmin work."
-        [[params.experience.list.items]]
-        details = "I have migrated the cluster from helm 2 to helm 3 without downtime"
-        [[params.experience.list.items]]
-        details = "We were using Landscaper and we have changed it to helmfile"
-        [[params.experience.list.items]]
-        details = "I am working on implementing Istio in our Clusters"
-
-        [[params.experience.list]]
-        title = "Java Developer"
-        dates = "May 2019 – Mar 2020"
-        company = "Crunch"
-        details = "Crunch is a medium-sized business whose main product is an accounting software."
-        [[params.experience.list.items]]
-        details = "We migrated the old security system to Java Services"
-        [[params.experience.list.items]]
-        details = "We were using a Spring Boot services in cluster but the Software System is based in docker"
-
-        [[params.experience.list]]
-        title = "Senior Java Developer"
-        dates = "Oct 2018 – Mar 2019"
-        company = "Exis-TI (Indra)"
-        details = "I was hired by Exis-TI for working in Indra. Indra is a big business which has a lot of branches around the world."
-        [[params.experience.list.items]]
-        details = "I was working in a project for the Ministry of Agriculture of Cataluña. In this project, we were using Spring, Oracle SQL, AngularJS. My role in this project was Full Stack. I have to say that there was a lot of work in the Backend and I did some work in the front. The Java JDK that we were using was 1.8."
-
-        [[params.experience.list]]
-        title = "Senior Java Developer"
-        dates = "Jul 2017 – Oct 2018"
-        company = "Hiberus Tecnologia"
-        details = "Hiberus Tecnologia is a big business which has various branches in Spain and one in the U.K. It works with a number of businesses in Spain and some of them are well-renowned like FOX, Simply, Vodafone, Movistar, Amadeus, Ibercaja, and many others."
-        [[params.experience.list.items]]
-        details = "I built Java web services, one application on Angularjs and one application on Ionic."
-        [[params.experience.list.items]]
-        details = "I was in a section of the company which was working for Travel-IMS, a branch of Amadeus which carries out work for many travel companies. I was full stack and I used EJB, JSF, Angular and Spring. But due to the large workload of the old application, since we were still selling both versions of the app. I worked more with JSF and EJB."
-
-        [[params.experience.list]]
-        title = "Java Developer"
-        dates = "Nov 2016 – Jul 2017"
-        company = "CPS Ingenieros"
-        details = "CPS Ingenieros Obra Civil y Medio Ambiente S.L. is a medium-sized business which manages some branches of the General Direction of Traffic. The headquarters are situated in Valencia."
-        [[params.experience.list.items]]
-        details = "I built Java desk programs and Java web services. These projects were about roads and traffic-related matters."
-        [[params.experience.list.items]]
-        details = "I was in charge of a project which used spring web."
-        [[params.experience.list]]
-        title = "Junior Developer"
-        dates = "2012-2015"
-        company = "Soluciones Informáticas Netymedia"
-        details = "Netymedia is a small business that develops websites and custom applications."
-        [[params.experience.list.items]]
-        details = "Various projects and management of two servers: Linux Debian 8, Windows Server 2003."
-        [[params.experience.list.items]]
-        details = "I built Java desk programs, Java web apps and REST web services."
-        [[params.experience.list.items]]
-        details = "I built a PHP Web Service that helps emergency services in the event that a chemical business explodes."
-        [[params.experience.list.items]]
-        details = "This application allowed the emergency services to see the emergency plan while they are on the way to the incident, in this way, the response time is faster than before."
-        [[params.experience.list.items]]
-        details = "Web Development – I built websites for various clients."
-        [[params.experience.list.items]]
-        details = "I was accountable for several interns."
-
-
-    [params.projects]
-        enable = true
-
-        [[params.projects.list]]
-        title = "Jorge's Notebook"
-        meta = "Blog"
-        url = "https://jorgesnotebook.com"
-        tagline = "I'll post about my knowledge and some things that I discover while I’m working. I won’t post everyday because that’s impossible. I’ll try to post once per week or at least once per month."
-
-
-
-    [params.information]
-        enable = false
-
-        [[params.information.list]]
-        title = "Interests"
-        details = "Climbing, Snowboarding, Photography, Travelling, Rugby, Football, Tennis, Table Tennis and Surf."
-
-
     [params.social]
-        enable = true
-
         [[params.social.list]]
         icon = "fab fa-github-square"
-        url = "//github.com/jorgeancal"
-        title = "Jorgeancal"
+        url = "https://github.com/jorgeancal"
+        title = "GitHub"
         [[params.social.list]]
         icon = "fab fa-linkedin"
-        url = "//linkedin.com/in/jorgeancal"
-        title = "Jorge Andreu Calatayud"
+        url = "https://linkedin.com/in/jorgeancal"
+        title = "LinkedIn"
         [[params.social.list]]
         icon = "fab fa-twitter-square"
-        url = "//twitter.com/jorgeancal"
-        title = "@jorgeancal"
+        url = "https://twitter.com/jorgeancal"
+        title = "X (@jorgeancal)"
 
     [params.footer]
         copyright = "jorgeancal"
