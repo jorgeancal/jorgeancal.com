@@ -112,12 +112,6 @@ disableKinds = ["taxonomy", "term", "RSS"]
             [[params.experience.list.roles]]
             title = "Staff Site Reliability Engineer"
             dates = "May 2025 – Nov 2026"
-            [[params.experience.list.roles.items]]
-            details = "Led SRE practices across the platform, with a focus on reliability, scalability and automation."
-            [[params.experience.list.roles.items]]
-            details = "Maintained and evolved the Kubernetes (EKS) platform, including the Cilium and Linkerd service mesh."
-            [[params.experience.list.roles.items]]
-            details = "Contributed to Maia AI (maia.ai), Matillion's AI-powered data assistant, supporting the reliability and scalability of its workloads."
 
             [[params.experience.list.roles]]
             title = "Senior Site Reliability Engineer"
