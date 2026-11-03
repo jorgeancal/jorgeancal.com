@@ -77,10 +77,22 @@ section h3{font-size:1rem}
 .icon.mr{margin-right:.5rem}
 .plain{list-style:none}
 .plain li{margin-bottom:.25rem;font-size:.9375rem;break-inside:avoid}
-.plain.cols{column-count:2;column-gap:2rem}
+
 .cv-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:0 2rem}
 .cv-columns h3,.cv section h3{margin-top:.75rem}
-.cv-header{padding:2rem 0 1rem}
+.container.wide{max-width:68rem}
+.cv-header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:1rem 2rem;padding:2.5rem 0 1.5rem}
+.cv-header .tagline{margin-bottom:0}
+.cv-header .links{font-size:.9375rem}
+.cv-header .links li{margin-bottom:.25rem}
+.intro{display:flex;gap:2rem;align-items:center}
+.intro h2{margin-bottom:.75rem}
+.avatar{border-radius:50%;flex:none;width:120px;height:120px;object-fit:cover;background:#2a2a38}
+.cv-body{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:0 3rem;border-top:1px solid var(--border)}
+.cv-body section:first-child{border-top:0}
+.cv-main,.cv-side{min-width:0}
+.project+.project{margin-top:1rem}
+.project p:last-child{margin:.25rem 0 0;font-size:.9375rem}
 .prose{padding-top:2rem;padding-bottom:2rem;max-width:40rem}
 .prose h1{margin-bottom:1rem}
 .prose h2{color:var(--text);font-size:1.125rem;margin:1.5rem 0 .5rem}
@@ -97,6 +109,8 @@ section h3{font-size:1rem}
 .consent-actions{display:flex;gap:.75rem}
 
 @media (max-width:40rem){
+  .cv-body{grid-template-columns:1fr}
+  .intro{flex-direction:column;align-items:flex-start;gap:1.25rem}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
