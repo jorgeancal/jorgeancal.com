@@ -1,5 +1,5 @@
-{{- /* Employers with their roles, newest first. Pass dict "full" true to include each role's bullets. */ -}}
-{{- $full := .full -}}
+{{- /* Employers with their roles, newest first.. */ -}}
+{{- $full := true -}}
 {{- range site.Params.experience.list }}
 {{- $roles := .roles }}
 {{- if not $roles }}{{ errorf "employer %q has no roles" .company }}{{ end }}

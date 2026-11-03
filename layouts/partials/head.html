@@ -17,7 +17,7 @@
     <link rel="canonical" href="{{ .Permalink }}">
 
     <!-- Open Graph -->
-    <meta property="og:type" content="{{ if or .IsHome (eq .Layout "cv") }}profile{{ else }}website{{ end }}">
+    <meta property="og:type" content="{{ if .IsHome }}profile{{ else }}website{{ end }}">
     <meta property="og:site_name" content="{{ .Site.Params.author }}">
     <meta property="og:locale" content="en_GB">
     <meta property="og:title" content="{{ $title }}">
@@ -44,7 +44,7 @@
     <link rel="apple-touch-icon" href="{{ "images/apple-touch-icon.png" | absURL }}">
 
     <!-- Structured data -->
-    {{ if or .IsHome (eq .Layout "cv") }}{{ partial "schema.html" . }}{{ end }}
+    {{ if .IsHome }}{{ partial "schema.html" . }}{{ end }}
 
     <!-- Fonts (self-hosted) -->
     <link rel="preload" href="{{ "fonts/roboto-latin-400-normal.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>

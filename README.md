@@ -27,8 +27,7 @@ PDF is published with the site.
 
 | URL | Source |
 | --- | --- |
-| `/` | `layouts/index.html` |
-| `/cv/` | `content/cv.md` with `layouts/_default/cv.html`; print styles also drive the PDF |
+| `/` | `layouts/index.html`: the CV itself; print styles also drive the PDF |
 | `/privacy/` | `content/privacy.md` |
 
 ## Where things live
@@ -37,16 +36,13 @@ PDF is published with the site.
 | --- | --- |
 | All CV and homepage content | `config.toml` under `[params]` |
 | Employers and roles | `params.experience.list`: one entry per employer, with its `roles` |
-| Specialisms, selected work, projects | `params.specialisms`, `params.selectedWork`, `params.projects` |
+| Projects | `params.projects` |
 | SEO values (description, job title, keywords, share image) | `config.toml`, top-level `[params]` |
 | Templates | `layouts/` (`_default/baseof.html` wraps every page) |
 | Styles | `assets/css/site.css`, inlined into each page at build time |
 | Icons (inline SVG, Font Awesome Free, CC BY 4.0) | `assets/icons/`, used through `layouts/partials/icon.html` |
 | Self-hosted fonts (Roboto, SIL OFL 1.1) | `static/fonts/` |
 | Share image, favicons | `static/images/`, `static/favicon.ico` |
-
-Employer descriptions and role bullets are written once and used for both the
-homepage career section and the CV, so there is a single source for each fact.
 
 ### Adding a role
 

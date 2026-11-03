@@ -1,49 +1,33 @@
 {{ define "main" }}
-        <div class="container">
-            <section class="hero" aria-labelledby="top">
-                {{- $img := resources.Get (printf "images/%s" site.Params.profile.avatar) }}
-                {{- with $img }}{{ $img = .Resize "240x240 webp q85" }}
-                <img class="avatar" src="{{ $img.RelPermalink }}" alt="" width="120" height="120" decoding="async">
-                {{- end }}
-                <div>
-                    <h1 id="top">{{ site.Params.profile.fullName }}</h1>
-                    <p class="tagline">{{ site.Params.profile.tagline }}</p>
-                    <p class="intro">{{ site.Params.summary.text }}</p>
-                    <p class="hero-actions">
-                        <a class="btn btn-primary" href="{{ "/cv/" | relURL }}">View full CV</a>
-                        <a class="btn" href="{{ "/#projects" | relURL }}">Projects</a>
-                        <a class="btn" href="{{ "/#contact" | relURL }}">Contact</a>
-                    </p>
-                </div>
+        <div class="container cv">
+            <header class="cv-header">
+                <h1>{{ site.Params.profile.fullName }}</h1>
+                <p class="tagline">{{ site.Params.profile.tagline }}</p>
+                <ul class="links inline" id="contact">
+                        {{- range site.Params.contact.list }}
+                        <li><a href="{{ .url | safeURL }}">{{ .text }}</a></li>
+                        {{- end }}
+                        <li>{{ site.Params.contact.location }}</li>
+                        {{- range site.Params.social.list }}
+                        <li><a href="{{ .url }}" rel="me noopener">{{ .title }}</a></li>
+                        {{- end }}
+                        <li><a href="{{ site.Params.notebook }}" rel="noopener">Jorge's Notebook</a></li>
+                </ul>
+                <p class="cv-actions"><a class="btn btn-primary" href="{{ site.Params.cvPdf | relURL }}" download>Download PDF</a></p>
+            </header>
+
+            <section id="summary" aria-labelledby="h-summary">
+                <h2 id="h-summary">Summary</h2>
+                <p>{{ site.Params.summary.text }}</p>
             </section>
 
-            <section id="specialisms" aria-labelledby="h-specialisms">
-                <h2 id="h-specialisms">Specialisms</h2>
-                <div class="grid">
-                    {{- range site.Params.specialisms.list }}
-                    <div>
-                        <h3>{{ .title }}</h3>
-                        <p>{{ .details }}</p>
-                    </div>
-                    {{- end }}
-                </div>
-            </section>
-
-            <section id="work" aria-labelledby="h-work">
-                <h2 id="h-work">Selected work</h2>
-                <div class="cards">
-                    {{- range site.Params.selectedWork.list }}
-                    <article>
-                        <h3>{{ .title }}</h3>
-                        <p class="meta">{{ .meta }}</p>
-                        <p>{{ .details }}</p>
-                    </article>
-                    {{- end }}
-                </div>
+            <section id="experience" aria-labelledby="h-experience">
+                <h2 id="h-experience">Work experience</h2>
+{{ partial "employers.html" . }}
             </section>
 
             <section id="projects" aria-labelledby="h-projects">
-                <h2 id="h-projects">Featured projects</h2>
+                <h2 id="h-projects">Projects</h2>
                 <div class="cards">
                     {{- range site.Params.projects.list }}
                     <article>
@@ -55,24 +39,55 @@
                 </div>
             </section>
 
-            <section id="career" aria-labelledby="h-career">
-                <h2 id="h-career">Career</h2>
-{{ partial "employers.html" (dict "full" false) }}
-                <p class="more"><a href="{{ "/cv/" | relURL }}">Full CV with responsibilities, education and skills</a></p>
+            <section id="skills" aria-labelledby="h-skills">
+                <h2 id="h-skills">Skills</h2>
+                {{- range site.Params.skills.list }}
+                <h3>{{ .title }}</h3>
+                <ul class="plain cols">
+                    {{- range .items }}
+                    <li>{{ .details }}</li>
+                    {{- end }}
+                </ul>
+                {{- end }}
             </section>
 
-            <section id="contact" aria-labelledby="h-contact">
-                <h2 id="h-contact">Contact</h2>
-                <ul class="links">
-                    {{- range site.Params.contact.list }}
-                    <li>{{ partial "icon.html" (dict "name" .icon "class" "mr") }}<a href="{{ .url | safeURL }}">{{ .text }}</a></li>
+            <div class="cv-columns">
+                <section id="education" aria-labelledby="h-education">
+                    <h2 id="h-education">Education</h2>
+                    {{- range site.Params.education.list }}
+                    <h3>{{ .degree }}</h3>
+                    <p class="meta">{{ .university }}, {{ .dates }}</p>
                     {{- end }}
-                    {{- range site.Params.social.list }}
-                    <li>{{ partial "icon.html" (dict "name" .icon "class" "mr") }}<a href="{{ .url }}" rel="me noopener">{{ .title }}</a></li>
+                </section>
+
+                <section id="awards" aria-labelledby="h-awards">
+                    <h2 id="h-awards">Awards</h2>
+                    {{- range site.Params.awards.list }}
+                    <h3>{{ .name }}</h3>
+                    <p class="meta">{{ .date }}</p>
+                    <p>{{ .body }}</p>
                     {{- end }}
-                    <li>{{ partial "icon.html" (dict "name" "globe" "class" "mr") }}<a href="{{ site.Params.notebook }}" rel="noopener">Jorge's Notebook</a></li>
-                    <li>{{ partial "icon.html" (dict "name" "map-marker-alt" "class" "mr") }}{{ site.Params.contact.location }}</li>
+                </section>
+            </div>
+
+            <div class="cv-columns">
+                <section aria-labelledby="h-languages">
+                    <h2 id="h-languages">Languages</h2>
+                    <ul class="plain">
+                        {{- range site.Params.languages.list }}
+                        <li>{{ .name }} ({{ .level }})</li>
+                        {{- end }}
                 </ul>
-            </section>
+                </section>
+
+                <section aria-labelledby="h-interests">
+                    <h2 id="h-interests">Interests</h2>
+                    <ul class="plain">
+                        {{- range site.Params.interests.list }}
+                        <li>{{ .name }}</li>
+                        {{- end }}
+                </ul>
+                </section>
+            </div>
         </div>
 {{ end }}

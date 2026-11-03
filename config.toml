@@ -66,56 +66,6 @@ disableKinds = ["taxonomy", "term", "RSS"]
         url = "mailto:contact@jorgeancal.com"
         text = "contact@jorgeancal.com"
 
-    [params.specialisms]
-        [[params.specialisms.list]]
-        title = "Cloud and AWS"
-        details = "Amazon EKS, RDS and ECS."
-
-        [[params.specialisms.list]]
-        title = "Kubernetes"
-        details = "Helm, Helmfile, Cilium, Linkerd and Istio."
-
-        [[params.specialisms.list]]
-        title = "Site reliability"
-        details = "Platform reliability, zero-downtime upgrades, SLOs and incident response."
-
-        [[params.specialisms.list]]
-        title = "Observability"
-        details = "OpenTelemetry, Grafana, Loki, Mimir, Tempo and Prometheus."
-
-        [[params.specialisms.list]]
-        title = "Distributed systems"
-        details = "Kafka and cloud-native architectures."
-
-        [[params.specialisms.list]]
-        title = "Automation and GitOps"
-        details = "Terraform, Ansible, Argo and Helmfile."
-
-        [[params.specialisms.list]]
-        title = "Go and Java"
-        details = "Backend services in Go and Java, including Spring Boot."
-
-    [params.selectedWork]
-        [[params.selectedWork.list]]
-        title = "Zero-downtime Kubernetes upgrades"
-        meta = "Matillion, 2024 to 2025"
-        details = "Improved the cluster upgrade process so that upgrades to the SaaS platform's Kubernetes clusters are smooth and cause no downtime."
-
-        [[params.selectedWork.list]]
-        title = "In-house observability platform"
-        meta = "Matillion, 2022 to 2025"
-        details = "Implemented Matillion's own observability platform on Grafana, Loki, Tempo and Mimir, and migrated services to OpenTelemetry."
-
-        [[params.selectedWork.list]]
-        title = "EKS platform with Cilium and Linkerd"
-        meta = "Matillion, 2024 to present"
-        details = "Maintain and evolve the Amazon EKS platform, including the Cilium and Linkerd networking and service mesh layers and the AWS RDS and ECS integrations."
-
-        [[params.selectedWork.list]]
-        title = "Helm 2 to Helm 3 migration"
-        meta = "Crunch, 2020 to 2021"
-        details = "Migrated the cluster from Helm 2 to Helm 3 without downtime, and replaced Landscaper with Helmfile."
-
     [params.projects]
         [[params.projects.list]]
         title = "Zagalin"

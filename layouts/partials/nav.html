@@ -2,9 +2,9 @@
         <nav class="container" aria-label="Primary">
             <a class="brand" href="{{ "/" | relURL }}">{{ site.Params.profile.name }}</a>
             <ul>
-                <li><a href="{{ "/#work" | relURL }}">Work</a></li>
+                <li><a href="{{ "/#experience" | relURL }}">Experience</a></li>
                 <li><a href="{{ "/#projects" | relURL }}">Projects</a></li>
-                <li><a href="{{ "/cv/" | relURL }}"{{ if eq .RelPermalink "/cv/" }} aria-current="page"{{ end }}>CV</a></li>
+                <li><a href="{{ "/#skills" | relURL }}">Skills</a></li>
                 <li><a href="{{ "/#contact" | relURL }}">Contact</a></li>
             </ul>
         </nav>
