@@ -82,7 +82,7 @@ section h3{font-size:1rem}
 .intro{display:flex;gap:2rem;align-items:center}
 .intro h2{margin-bottom:.75rem}
 .avatar{border-radius:50%;flex:none;width:120px;height:120px;object-fit:cover;background:#2a2a38}
-.cv-body{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:0 3rem;border-top:1px solid var(--border)}
+.cv-body{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:0 3.5rem;border-top:1px solid var(--border)}
 .cv-body section:first-child{border-top:0}
 .cv-main,.cv-side{min-width:0}
 .project+.project{margin-top:1rem}
@@ -91,11 +91,11 @@ section h3{font-size:1rem}
 .prose h1{margin-bottom:1rem}
 .prose h2{color:var(--text);font-size:1.125rem;margin:1.5rem 0 .5rem}
 
-/* The CV is drawn as an A4 sheet on the dark page background. */
+/* The CV is drawn as a single sheet on the dark page background. */
 .sheet{
   --bg:var(--panel);
-  background:var(--panel);width:min(210mm,calc(100% - 2rem));min-height:297mm;
-  margin:2rem auto;padding:16mm 15mm;border:1px solid var(--border);box-shadow:0 12px 40px rgba(0,0,0,.7)
+  background:var(--panel);width:min(71rem,calc(100% - 2rem));
+  margin:2rem auto;padding:3rem 3.5rem;border:1px solid var(--border);box-shadow:0 12px 40px rgba(0,0,0,.7)
 }
 .sheet .cv-header{padding-top:0}
 @media screen and (max-width:48rem){
