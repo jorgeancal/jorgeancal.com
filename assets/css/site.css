@@ -32,7 +32,7 @@ a:hover{color:var(--accent-hover)}
 .brand{color:var(--text);font-weight:700;text-decoration:none;letter-spacing:.05em}
 
 /* Hero */
-.cv-header h1{color:var(--mark);font-size:clamp(1.75rem,5.5vw,2.375rem);font-weight:700;letter-spacing:.1em;text-transform:uppercase;line-height:1.15}
+.cv-header h1{color:var(--mark);font-size:clamp(2rem,6vw,2.75rem);font-weight:700;letter-spacing:.14em;text-transform:uppercase;line-height:1.15}
 .tagline{color:var(--body);font-size:1.25rem;margin:.5rem 0 1.25rem}
 .cv-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.25rem 0 0}
 .btn{display:inline-block;border:1px solid var(--border);border-radius:.25rem;color:var(--text);font-weight:700;padding:.5rem 1rem;text-decoration:none;background:transparent;font-family:inherit;font-size:1rem;cursor:pointer}
