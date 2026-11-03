@@ -43,7 +43,7 @@
     <link rel="apple-touch-icon" href="https://jorgeancal.com/images/apple-touch-icon.png">
 
     
-    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@id":"https://jorgeancal.com/#person","@type":"Person","address":{"@type":"PostalAddress","addressCountry":"GB","addressLocality":"Shropshire"},"alumniOf":{"@type":"CollegeOrUniversity","name":"University of Wales"},"description":"Jorge Andreu Calatayud is a Senior Staff Site Reliability Engineer in Shropshire, UK, specialising in AWS, Kubernetes, observability and platform reliability.","email":"mailto:contact@jorgeancal.com","familyName":"Andreu Calatayud","givenName":"Jorge","image":"https://jorgeancal.com/images/og-image.png","jobTitle":"Senior Staff Site Reliability Engineer","knowsAbout":["Site Reliability Engineer","SRE","Kubernetes","AWS","EKS","Terraform","OpenTelemetry","Grafana","Observability","Go","Platform Engineering"],"knowsLanguage":["Spanish","English"],"name":"Jorge Andreu Calatayud","sameAs":["https://github.com/jorgeancal","https://linkedin.com/in/jorgeancal","https://twitter.com/jorgeancal","https://github.com/jorgesnotebook/jorgeancal-zagalin-app"],"url":"https://jorgeancal.com/","worksFor":{"@type":"Organization","name":"Matillion","url":"https://www.matillion.com"}},{"@id":"https://jorgeancal.com/#website","@type":"WebSite","inLanguage":"en-GB","name":"Jorge Andreu Calatayud","publisher":{"@id":"https://jorgeancal.com/#person"},"url":"https://jorgeancal.com/"},{"@type":"ProfilePage","inLanguage":"en-GB","isPartOf":{"@id":"https://jorgeancal.com/#website"},"mainEntity":{"@id":"https://jorgeancal.com/#person"},"name":"Jorge Andreu Calatayud | Senior Staff Site Reliability Engineer","url":"https://jorgeancal.com/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@id":"https://jorgeancal.com/#person","@type":"Person","address":{"@type":"PostalAddress","addressCountry":"GB","addressLocality":"Shropshire"},"alumniOf":{"@type":"CollegeOrUniversity","name":"University of Wales"},"description":"Jorge Andreu Calatayud is a Senior Staff Site Reliability Engineer in Shropshire, UK, specialising in AWS, Kubernetes, observability and platform reliability.","email":"mailto:contact@jorgeancal.com","familyName":"Andreu Calatayud","givenName":"Jorge","image":"https://jorgeancal.com/images/og-image.png","jobTitle":"Senior Staff Site Reliability Engineer","knowsAbout":["Site Reliability Engineer","SRE","Kubernetes","AWS","EKS","Terraform","OpenTelemetry","Grafana","Observability","Go","Platform Engineering"],"knowsLanguage":["Spanish","English"],"name":"Jorge Andreu Calatayud","sameAs":["https://github.com/jorgeancal","https://linkedin.com/in/jorgeancal","https://twitter.com/jorgeancal","https://jorgesnotebook.com"],"url":"https://jorgeancal.com/","worksFor":{"@type":"Organization","name":"Matillion","url":"https://www.matillion.com"}},{"@id":"https://jorgeancal.com/#website","@type":"WebSite","inLanguage":"en-GB","name":"Jorge Andreu Calatayud","publisher":{"@id":"https://jorgeancal.com/#person"},"url":"https://jorgeancal.com/"},{"@type":"ProfilePage","inLanguage":"en-GB","isPartOf":{"@id":"https://jorgeancal.com/#website"},"mainEntity":{"@id":"https://jorgeancal.com/#person"},"name":"Jorge Andreu Calatayud | Senior Staff Site Reliability Engineer","url":"https://jorgeancal.com/"}]}</script>
 
 
     
@@ -334,24 +334,28 @@
             gtag("config", id);
         }
         function clearCookies() {
+            var host = location.hostname, parts = host.split("."),
+                domains = ["", "; domain=" + host, "; domain=." + host, "; domain=." + parts.slice(-2).join(".")];
             document.cookie.split(";").forEach(function (c) {
                 var n = c.split("=")[0].trim();
                 if (n === "_ga" || n.indexOf("_ga_") === 0) {
-                    document.cookie = n + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
-                    document.cookie = n + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=" + location.hostname;
+                    domains.forEach(function (d) {
+                        document.cookie = n + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/" + d;
+                    });
                 }
             });
         }
         function choose(v) {
             try { localStorage.setItem(key, v); } catch (e) {}
             box.hidden = true;
-            if (v === "granted") load(); else clearCookies();
+            if (v === "granted") { window["ga-disable-" + id] = false; load(); }
+            else { window["ga-disable-" + id] = true; clearCookies(); }
             settings.focus();
         }
         var saved = null;
         try { saved = localStorage.getItem(key); } catch (e) {}
         settings.hidden = false;
-        if (saved === "granted") load(); else if (saved !== "denied") box.hidden = false;
+        if (saved === "granted") load(); else { window["ga-disable-" + id] = true; if (saved !== "denied") box.hidden = false; }
         document.getElementById("consent-accept").onclick = function () { choose("granted"); };
         document.getElementById("consent-decline").onclick = function () { choose("denied"); };
         settings.onclick = function () { box.hidden = false; document.getElementById("consent-accept").focus(); };
