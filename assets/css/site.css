@@ -138,7 +138,9 @@ section h3{font-size:1rem}
   .cv-body{gap:0 2rem}
   .avatar{display:none}
   .cv-header{padding:0 0 .5rem}
-  .contact{border-left:0;padding-left:0;grid-template-columns:repeat(3,auto)}
+  .cv-header{display:block}
+  .contact{display:flex;flex-wrap:wrap;gap:.1rem 1.25rem;border-left:0;padding-left:0;margin:.25rem 0 0}
+  .print-hide{display:none}
   .icon{display:none}
   .intro h2{margin-bottom:.25rem}
   body{background:#fff;color:#111}
